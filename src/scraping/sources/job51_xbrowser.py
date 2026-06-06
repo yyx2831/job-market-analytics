@@ -12,6 +12,7 @@ from __future__ import annotations
 import json
 import logging
 import os
+import random
 import subprocess
 import time
 from dataclasses import asdict
@@ -69,8 +70,8 @@ class Job51XBrowserCollector:
         *,
         page_size: int = 20,
         max_pages: int = 50,
-        rate_min: float = 3.0,
-        rate_max: float = 8.0,
+        rate_min: float = 15.0,
+        rate_max: float = 30.0,
         timeout: float = 30.0,
     ):
         self.output_dir = output_dir
@@ -82,6 +83,9 @@ class Job51XBrowserCollector:
         self.timeout = timeout
         self.results: list[RawJob] = []
         self._session_ready = False
+        self._consecutive_errors = 0
+        self._max_consecutive_errors = 3
+        self._waf_cooldown = 120  # WAF 冷却秒数
 
     # ── xbrowser 交互 ─────────────────────────────────────
 
@@ -251,6 +255,52 @@ class Job51XBrowserCollector:
 }})()"""
         return js
 
+    # ── WAF 检测与恢复 ───────────────────────────────────
+
+    def _detect_waf(self, data: dict) -> bool:
+        """检测 API 响应是否被 WAF 拦截。"""
+        error = data.get("error", "")
+        if not error:
+            return False
+        waf_keywords = ["aliyun", "challenge", "captcha", "blocked", "verify", "WAF", "安全"]
+        return any(kw.lower() in error.lower() for kw in waf_keywords)
+
+    def _reload_and_wait(self, url: str) -> None:
+        """重新加载页面并等待冷却。"""
+        logger.info("WAF detected, reloading page and cooling down %.0fs...", self._waf_cooldown)
+        self._session_ready = False
+        try:
+            self._xb_open(url)
+            # 模拟人类行为
+            human_js = build_human_behavior_js()
+            try:
+                self._xb_eval(human_js, timeout_sec=5)
+            except Exception:
+                pass
+            self._session_ready = True
+        except Exception as e:
+            logger.warning("reload failed: %s", e)
+        wait = self._waf_cooldown + random.uniform(0, 30)
+        logger.info("cooling down %.1fs...", wait)
+        time.sleep(wait)
+        self._consecutive_errors = 0
+
+    def _handle_api_error(self, keyword: str, city_code: str, error_msg: str) -> bool:
+        """处理 API 错误，返回 True 表示已恢复可重试。"""
+        self._consecutive_errors += 1
+        logger.warning("consecutive errors: %d/%d", self._consecutive_errors, self._max_consecutive_errors)
+
+        if self._consecutive_errors >= self._max_consecutive_errors:
+            url = f"https://we.51job.com/pc/search?keyword={keyword}&location={city_code}"
+            self._reload_and_wait(url)
+            return True
+
+        # 少量错误，短暂等待
+        wait = 10 * self._consecutive_errors + random.uniform(0, 5)
+        logger.info("waiting %.1fs before retry...", wait)
+        time.sleep(wait)
+        return True
+
     # ── 核心采集逻辑 ──────────────────────────────────────
 
     @retry_on_failure(max_retries=3, base_delay=2.0, backoff_factor=1.5)
@@ -359,10 +409,15 @@ class Job51XBrowserCollector:
                 if start_page == 0:
                     total_count, items = self.fetch_page(keyword, city_code, page=1)
                     total_queries += 1
+                    self._consecutive_errors = 0
                     jobs = [self._to_raw_job(item, keyword, city) for item in items]
                     self.results.extend(jobs)
                     already_collected += len(jobs)
                     self._save_kw_progress(city, keyword, last_page=1, total_collected=already_collected)
+
+                    if not items:
+                        logger.warning("keyword=%s page=1 empty (total=%d), WAF suspected", keyword, total_count)
+                        continue
 
                     actual_max = min(max_pages_per_keyword, self.max_pages, (total_count // self.page_size) + 1)
                     logger.info("keyword=%s: total=%d, will fetch up to %d pages", keyword, total_count, actual_max)
@@ -380,6 +435,7 @@ class Job51XBrowserCollector:
                     try:
                         _, items = self.fetch_page(keyword, city_code, page)
                         total_queries += 1
+                        self._consecutive_errors = 0
                         new_jobs = [self._to_raw_job(item, keyword, city) for item in items]
                         self.results.extend(new_jobs)
                         already_collected += len(new_jobs)
@@ -392,10 +448,19 @@ class Job51XBrowserCollector:
                             break
                     except Exception as e:
                         logger.warning("keyword=%s page=%d failed: %s", keyword, page, e)
-                        raise
+                        # WAF 恢复后重试该页
+                        self._handle_api_error(keyword, city_code, str(e))
+                        logger.info("retrying page=%d after WAF recovery", page)
+                        _, items = self.fetch_page(keyword, city_code, page)
+                        total_queries += 1
+                        self._consecutive_errors = 0
+                        new_jobs = [self._to_raw_job(item, keyword, city) for item in items]
+                        self.results.extend(new_jobs)
+                        already_collected += len(new_jobs)
+                        self._save_kw_progress(city, keyword, last_page=page, total_collected=already_collected)
 
             except Exception as e:
-                logger.error("keyword=%s failed: %s", keyword, e)
+                logger.error("keyword=%s failed after recovery: %s", keyword, e)
                 continue
 
             # 关键词间随机等待

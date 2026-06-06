@@ -55,8 +55,8 @@ def keyword_interval_sleep(min_seconds: float = 5.0, max_seconds: float = 12.0) 
     return random_sleep(min_seconds, max_seconds)
 
 
-def city_interval_sleep(min_seconds: float = 20.0, max_seconds: float = 40.0) -> float:
-    """城市切换间等待（最长，降低跨城市被封概率）。"""
+def city_interval_sleep(min_seconds: float = 60.0, max_seconds: float = 120.0) -> float:
+    """城市切换间等待（2分钟以上，降低跨城市被封概率）。"""
     return random_sleep(min_seconds, max_seconds)
 
 
