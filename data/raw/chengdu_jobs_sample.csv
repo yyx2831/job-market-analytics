@@ -1,0 +1,361 @@
+source_job_id,title,company_name,salary_text,city,district,experience,education,industry,company_size,financing_stage,skills,description,source,source_url,publish_time
+sample-0001,Java 开发工程师,成都蓉创科技有限公司14,8-23K,成都,锦江区,不限,硕士,互联网,20-99人,未融资,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/1,2026-05-06
+sample-0002,数据分析师,成都天府科技有限公司29,7-15K,成都,双流区,3-5年,不限,企业服务,100-499人,上市公司,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/2,2026-03-12
+sample-0003,运维工程师,成都云智科技有限公司14,9-19K,成都,金牛区,5-10年,不限,电子商务,500-999人,C轮及以上,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/3,2026-05-07
+sample-0004,产品经理,成都锦城科技有限公司71,8-26K,成都,武侯区,3-5年,大专,智能制造,20-99人,未融资,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/4,2026-04-16
+sample-0005,数据分析师,成都天府科技有限公司36,8-16K,成都,双流区,3-5年,大专,电子商务,500-999人,天使轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/5,2026-05-22
+sample-0006,产品经理,成都锦城科技有限公司49,8-21K,成都,天府新区,1-3年,本科,企业服务,20-99人,天使轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/6,2026-05-14
+sample-0007,Python 后端工程师,成都锦城科技有限公司73,12-27K·13薪,成都,青羊区,1-3年,硕士,金融科技,1000-9999人,天使轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/7,2026-05-26
+sample-0008,产品经理,成都天府科技有限公司75,9-22K·13薪,成都,双流区,3-5年,大专,软件服务,1000-9999人,未融资,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/8,2026-03-21
+sample-0009,Python 后端工程师,成都云智科技有限公司77,10-23K,成都,双流区,5-10年,硕士,教育培训,1000-9999人,C轮及以上,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/9,2026-03-08
+sample-0010,产品经理,成都云智科技有限公司44,12-19K,成都,成华区,3-5年,硕士,软件服务,1000-9999人,未融资,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/10,2026-03-08
+sample-0011,产品经理,成都蓉创科技有限公司65,12-21K,成都,成华区,1-3年,大专,电子商务,100-499人,C轮及以上,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/11,2026-03-15
+sample-0012,UI 设计师,成都锦城科技有限公司47,5-18K·14薪,成都,武侯区,1-3年,不限,软件服务,20-99人,未融资,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/12,2026-06-01
+sample-0013,电商运营,成都星河科技有限公司71,4-13K,成都,天府新区,3-5年,硕士,软件服务,100-499人,上市公司,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/13,2026-03-11
+sample-0014,产品经理,成都星河科技有限公司16,11-24K·14薪,成都,天府新区,1-3年,不限,电子商务,20-99人,C轮及以上,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/14,2026-03-29
+sample-0015,UI 设计师,成都云智科技有限公司30,6-16K,成都,高新区,不限,本科,互联网,100-499人,A轮,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/15,2026-05-25
+sample-0016,电商运营,成都星河科技有限公司53,5-13K·14薪,成都,天府新区,不限,不限,智能制造,1000-9999人,A轮,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/16,2026-05-03
+sample-0017,运维工程师,成都天府科技有限公司8,10-22K,成都,武侯区,3-5年,不限,软件服务,100-499人,天使轮,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/17,2026-03-09
+sample-0018,UI 设计师,成都星河科技有限公司60,8-15K·14薪,成都,成华区,不限,硕士,企业服务,20-99人,未融资,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/18,2026-05-11
+sample-0019,UI 设计师,成都天府科技有限公司63,5-14K,成都,双流区,1-3年,硕士,互联网,100-499人,B轮,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/19,2026-05-13
+sample-0020,Python 后端工程师,成都天府科技有限公司72,13-25K·14薪,成都,双流区,1-3年,大专,电子商务,100-499人,未融资,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/20,2026-04-28
+sample-0021,销售经理,成都天府科技有限公司75,8-17K·13薪,成都,高新区,1-3年,不限,教育培训,20-99人,天使轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/21,2026-05-27
+sample-0022,Java 开发工程师,成都星河科技有限公司73,12-20K,成都,武侯区,不限,不限,金融科技,500-999人,A轮,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/22,2026-04-13
+sample-0023,数据分析师,成都天府科技有限公司39,8-18K·13薪,成都,锦江区,3-5年,不限,互联网,1000-9999人,C轮及以上,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/23,2026-04-14
+sample-0024,销售经理,成都锦城科技有限公司17,4-18K,成都,成华区,不限,大专,电子商务,500-999人,天使轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/24,2026-03-31
+sample-0025,电商运营,成都星河科技有限公司14,8-15K,成都,成华区,3-5年,不限,互联网,100-499人,A轮,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/25,2026-03-10
+sample-0026,产品经理,成都天府科技有限公司65,12-22K·13薪,成都,成华区,3-5年,不限,互联网,1000-9999人,A轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/26,2026-05-08
+sample-0027,Python 后端工程师,成都天府科技有限公司21,10-26K,成都,成华区,5-10年,不限,互联网,20-99人,上市公司,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/27,2026-03-14
+sample-0028,前端开发工程师,成都星河科技有限公司56,11-17K·13薪,成都,锦江区,不限,本科,电子商务,20-99人,A轮,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/28,2026-03-21
+sample-0029,数据分析师,成都星河科技有限公司80,7-16K·13薪,成都,双流区,1-3年,大专,企业服务,100-499人,B轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/29,2026-03-24
+sample-0030,Python 后端工程师,成都星河科技有限公司35,11-26K·14薪,成都,青羊区,不限,硕士,企业服务,20-99人,B轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/30,2026-03-10
+sample-0031,数据分析师,成都云智科技有限公司29,7-22K·13薪,成都,青羊区,1-3年,硕士,电子商务,500-999人,未融资,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/31,2026-04-25
+sample-0032,产品经理,成都星河科技有限公司34,10-25K·13薪,成都,武侯区,3-5年,不限,互联网,1000-9999人,A轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/32,2026-05-31
+sample-0033,测试工程师,成都云智科技有限公司33,8-13K·14薪,成都,青羊区,5-10年,不限,教育培训,100-499人,A轮,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/33,2026-03-22
+sample-0034,运维工程师,成都蓉创科技有限公司39,7-20K·13薪,成都,武侯区,3-5年,硕士,电子商务,1000-9999人,上市公司,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/34,2026-03-11
+sample-0035,产品经理,成都蓉创科技有限公司23,12-21K,成都,双流区,3-5年,硕士,教育培训,20-99人,A轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/35,2026-04-11
+sample-0036,产品经理,成都星河科技有限公司57,9-25K·13薪,成都,天府新区,5-10年,大专,智能制造,20-99人,A轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/36,2026-04-05
+sample-0037,UI 设计师,成都星河科技有限公司29,9-18K,成都,成华区,1-3年,不限,互联网,100-499人,B轮,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/37,2026-05-04
+sample-0038,销售经理,成都天府科技有限公司50,4-24K·14薪,成都,青羊区,5-10年,大专,软件服务,20-99人,未融资,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/38,2026-03-15
+sample-0039,运维工程师,成都天府科技有限公司16,8-17K·14薪,成都,青羊区,1-3年,硕士,智能制造,500-999人,B轮,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/39,2026-05-28
+sample-0040,销售经理,成都锦城科技有限公司58,8-23K·14薪,成都,天府新区,1-3年,本科,企业服务,1000-9999人,上市公司,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/40,2026-05-14
+sample-0041,数据分析师,成都锦城科技有限公司35,8-22K,成都,青羊区,3-5年,不限,软件服务,100-499人,天使轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/41,2026-04-28
+sample-0042,运维工程师,成都蓉创科技有限公司43,8-18K,成都,双流区,5-10年,硕士,互联网,100-499人,B轮,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/42,2026-04-11
+sample-0043,运维工程师,成都锦城科技有限公司46,11-15K·14薪,成都,高新区,5-10年,硕士,教育培训,100-499人,B轮,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/43,2026-04-03
+sample-0044,数据分析师,成都天府科技有限公司44,8-21K·14薪,成都,双流区,1-3年,硕士,软件服务,20-99人,B轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/44,2026-05-31
+sample-0045,销售经理,成都天府科技有限公司18,8-17K,成都,双流区,1-3年,不限,电子商务,1000-9999人,A轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/45,2026-03-13
+sample-0046,数据分析师,成都锦城科技有限公司54,9-20K·13薪,成都,成华区,不限,硕士,互联网,20-99人,A轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/46,2026-04-16
+sample-0047,数据分析师,成都蓉创科技有限公司3,6-15K,成都,青羊区,1-3年,大专,软件服务,1000-9999人,上市公司,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/47,2026-05-03
+sample-0048,Java 开发工程师,成都星河科技有限公司48,12-22K·14薪,成都,成华区,不限,大专,电子商务,20-99人,C轮及以上,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/48,2026-03-06
+sample-0049,Python 后端工程师,成都星河科技有限公司76,12-27K·14薪,成都,武侯区,不限,本科,企业服务,20-99人,C轮及以上,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/49,2026-05-09
+sample-0050,Python 后端工程师,成都天府科技有限公司2,12-27K·13薪,成都,金牛区,5-10年,不限,金融科技,500-999人,上市公司,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/50,2026-05-26
+sample-0051,电商运营,成都蓉创科技有限公司79,5-17K,成都,成华区,5-10年,硕士,金融科技,500-999人,A轮,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/51,2026-03-29
+sample-0052,数据分析师,成都蓉创科技有限公司73,6-19K·14薪,成都,天府新区,5-10年,本科,互联网,1000-9999人,A轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/52,2026-05-03
+sample-0053,前端开发工程师,成都蓉创科技有限公司36,10-20K·13薪,成都,金牛区,3-5年,不限,教育培训,100-499人,未融资,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/53,2026-05-01
+sample-0054,数据分析师,成都天府科技有限公司63,9-22K,成都,天府新区,不限,不限,电子商务,100-499人,B轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/54,2026-03-07
+sample-0055,数据分析师,成都蓉创科技有限公司55,8-20K·14薪,成都,金牛区,3-5年,本科,智能制造,1000-9999人,A轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/55,2026-03-25
+sample-0056,产品经理,成都蓉创科技有限公司16,10-22K,成都,金牛区,1-3年,大专,软件服务,1000-9999人,A轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/56,2026-05-10
+sample-0057,销售经理,成都锦城科技有限公司30,8-21K,成都,成华区,1-3年,本科,互联网,100-499人,A轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/57,2026-05-10
+sample-0058,Python 后端工程师,成都云智科技有限公司14,10-25K,成都,天府新区,3-5年,硕士,金融科技,1000-9999人,A轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/58,2026-03-14
+sample-0059,前端开发工程师,成都天府科技有限公司52,7-21K·14薪,成都,武侯区,不限,不限,软件服务,100-499人,C轮及以上,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/59,2026-05-20
+sample-0060,产品经理,成都蓉创科技有限公司78,8-22K,成都,双流区,1-3年,硕士,金融科技,1000-9999人,A轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/60,2026-03-24
+sample-0061,销售经理,成都星河科技有限公司27,7-21K,成都,武侯区,3-5年,不限,软件服务,100-499人,天使轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/61,2026-03-17
+sample-0062,UI 设计师,成都天府科技有限公司77,5-15K,成都,天府新区,3-5年,不限,软件服务,500-999人,上市公司,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/62,2026-04-12
+sample-0063,产品经理,成都云智科技有限公司55,11-20K,成都,青羊区,1-3年,大专,电子商务,100-499人,未融资,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/63,2026-05-01
+sample-0064,Python 后端工程师,成都锦城科技有限公司60,11-25K·13薪,成都,武侯区,5-10年,本科,教育培训,1000-9999人,B轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/64,2026-04-08
+sample-0065,Java 开发工程师,成都云智科技有限公司4,12-19K·14薪,成都,成华区,1-3年,不限,企业服务,500-999人,C轮及以上,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/65,2026-04-23
+sample-0066,Python 后端工程师,成都天府科技有限公司75,11-28K·14薪,成都,锦江区,5-10年,不限,金融科技,500-999人,B轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/66,2026-04-29
+sample-0067,测试工程师,成都锦城科技有限公司64,7-13K,成都,双流区,5-10年,不限,金融科技,20-99人,A轮,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/67,2026-04-22
+sample-0068,产品经理,成都天府科技有限公司70,10-20K·14薪,成都,高新区,5-10年,不限,软件服务,500-999人,C轮及以上,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/68,2026-03-30
+sample-0069,电商运营,成都天府科技有限公司37,7-11K,成都,锦江区,5-10年,不限,互联网,100-499人,上市公司,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/69,2026-04-30
+sample-0070,前端开发工程师,成都天府科技有限公司15,9-17K·14薪,成都,青羊区,不限,大专,金融科技,500-999人,C轮及以上,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/70,2026-05-23
+sample-0071,产品经理,成都星河科技有限公司71,11-26K·14薪,成都,天府新区,5-10年,大专,教育培训,100-499人,未融资,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/71,2026-05-03
+sample-0072,产品经理,成都蓉创科技有限公司39,11-24K·13薪,成都,成华区,5-10年,大专,金融科技,1000-9999人,A轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/72,2026-06-03
+sample-0073,测试工程师,成都蓉创科技有限公司31,9-18K·14薪,成都,青羊区,5-10年,大专,企业服务,1000-9999人,未融资,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/73,2026-04-23
+sample-0074,测试工程师,成都云智科技有限公司64,8-18K·14薪,成都,锦江区,1-3年,本科,企业服务,20-99人,B轮,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/74,2026-03-11
+sample-0075,Java 开发工程师,成都云智科技有限公司20,12-26K,成都,双流区,5-10年,本科,电子商务,1000-9999人,上市公司,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/75,2026-05-16
+sample-0076,Java 开发工程师,成都云智科技有限公司70,10-25K·13薪,成都,天府新区,不限,大专,智能制造,500-999人,天使轮,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/76,2026-03-15
+sample-0077,Java 开发工程师,成都云智科技有限公司39,11-20K,成都,锦江区,不限,本科,企业服务,20-99人,A轮,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/77,2026-04-08
+sample-0078,测试工程师,成都星河科技有限公司73,7-18K,成都,双流区,1-3年,大专,互联网,1000-9999人,C轮及以上,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/78,2026-05-03
+sample-0079,数据分析师,成都锦城科技有限公司59,9-17K,成都,成华区,不限,硕士,电子商务,100-499人,未融资,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/79,2026-04-05
+sample-0080,电商运营,成都锦城科技有限公司59,6-15K·14薪,成都,成华区,1-3年,硕士,企业服务,1000-9999人,未融资,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/80,2026-03-07
+sample-0081,数据分析师,成都天府科技有限公司3,9-20K·13薪,成都,成华区,3-5年,不限,教育培训,20-99人,C轮及以上,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/81,2026-03-06
+sample-0082,电商运营,成都锦城科技有限公司80,6-14K·13薪,成都,青羊区,1-3年,不限,智能制造,20-99人,A轮,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/82,2026-05-06
+sample-0083,电商运营,成都天府科技有限公司42,4-16K,成都,成华区,1-3年,大专,软件服务,500-999人,C轮及以上,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/83,2026-05-23
+sample-0084,UI 设计师,成都云智科技有限公司44,7-15K·13薪,成都,成华区,5-10年,不限,软件服务,100-499人,上市公司,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/84,2026-04-03
+sample-0085,运维工程师,成都蓉创科技有限公司34,11-20K,成都,高新区,不限,硕士,电子商务,500-999人,C轮及以上,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/85,2026-04-14
+sample-0086,运维工程师,成都蓉创科技有限公司80,9-16K,成都,高新区,3-5年,大专,智能制造,20-99人,上市公司,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/86,2026-04-04
+sample-0087,电商运营,成都锦城科技有限公司5,6-17K,成都,高新区,5-10年,不限,互联网,100-499人,C轮及以上,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/87,2026-05-17
+sample-0088,前端开发工程师,成都星河科技有限公司76,10-24K·13薪,成都,双流区,5-10年,不限,企业服务,1000-9999人,C轮及以上,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/88,2026-03-10
+sample-0089,运维工程师,成都星河科技有限公司57,9-15K·13薪,成都,天府新区,3-5年,不限,智能制造,500-999人,C轮及以上,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/89,2026-05-07
+sample-0090,测试工程师,成都云智科技有限公司59,5-18K·13薪,成都,武侯区,1-3年,不限,互联网,500-999人,天使轮,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/90,2026-05-10
+sample-0091,前端开发工程师,成都星河科技有限公司76,11-20K,成都,青羊区,1-3年,本科,企业服务,100-499人,C轮及以上,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/91,2026-03-25
+sample-0092,Python 后端工程师,成都云智科技有限公司23,12-23K,成都,成华区,不限,大专,互联网,500-999人,天使轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/92,2026-03-26
+sample-0093,销售经理,成都天府科技有限公司17,6-17K,成都,高新区,不限,不限,金融科技,1000-9999人,A轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/93,2026-05-01
+sample-0094,UI 设计师,成都云智科技有限公司79,9-14K·14薪,成都,青羊区,3-5年,硕士,智能制造,20-99人,未融资,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/94,2026-03-31
+sample-0095,电商运营,成都云智科技有限公司10,7-17K,成都,天府新区,3-5年,大专,互联网,100-499人,A轮,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/95,2026-04-02
+sample-0096,销售经理,成都蓉创科技有限公司59,8-22K·14薪,成都,成华区,5-10年,不限,企业服务,20-99人,上市公司,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/96,2026-03-19
+sample-0097,UI 设计师,成都天府科技有限公司44,6-19K·14薪,成都,双流区,5-10年,硕士,智能制造,20-99人,A轮,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/97,2026-05-05
+sample-0098,运维工程师,成都云智科技有限公司9,9-19K·13薪,成都,天府新区,不限,不限,金融科技,20-99人,上市公司,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/98,2026-05-15
+sample-0099,测试工程师,成都锦城科技有限公司53,6-12K·13薪,成都,武侯区,5-10年,不限,电子商务,500-999人,A轮,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/99,2026-03-10
+sample-0100,Java 开发工程师,成都云智科技有限公司29,12-22K,成都,天府新区,3-5年,本科,互联网,500-999人,C轮及以上,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/100,2026-03-11
+sample-0101,数据分析师,成都锦城科技有限公司35,9-15K·13薪,成都,锦江区,3-5年,本科,互联网,100-499人,天使轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/101,2026-05-31
+sample-0102,销售经理,成都蓉创科技有限公司12,7-18K,成都,高新区,1-3年,硕士,金融科技,1000-9999人,A轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/102,2026-03-14
+sample-0103,前端开发工程师,成都星河科技有限公司7,9-21K·13薪,成都,武侯区,1-3年,不限,智能制造,20-99人,A轮,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/103,2026-03-23
+sample-0104,电商运营,成都蓉创科技有限公司28,7-18K·14薪,成都,成华区,不限,本科,金融科技,20-99人,A轮,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/104,2026-04-11
+sample-0105,销售经理,成都云智科技有限公司77,7-21K,成都,双流区,不限,大专,电子商务,100-499人,天使轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/105,2026-05-06
+sample-0106,产品经理,成都星河科技有限公司56,10-24K,成都,天府新区,1-3年,硕士,教育培训,100-499人,C轮及以上,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/106,2026-06-03
+sample-0107,UI 设计师,成都天府科技有限公司3,7-14K·14薪,成都,双流区,不限,本科,教育培训,1000-9999人,C轮及以上,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/107,2026-05-29
+sample-0108,运维工程师,成都星河科技有限公司42,10-19K,成都,高新区,5-10年,本科,互联网,1000-9999人,未融资,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/108,2026-04-13
+sample-0109,数据分析师,成都星河科技有限公司44,9-21K,成都,成华区,3-5年,大专,互联网,20-99人,C轮及以上,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/109,2026-04-14
+sample-0110,UI 设计师,成都云智科技有限公司31,6-18K·13薪,成都,锦江区,1-3年,本科,软件服务,100-499人,C轮及以上,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/110,2026-03-13
+sample-0111,前端开发工程师,成都蓉创科技有限公司73,7-19K·14薪,成都,天府新区,3-5年,本科,软件服务,1000-9999人,未融资,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/111,2026-04-05
+sample-0112,电商运营,成都蓉创科技有限公司46,7-15K·13薪,成都,高新区,不限,本科,金融科技,1000-9999人,未融资,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/112,2026-03-20
+sample-0113,Python 后端工程师,成都蓉创科技有限公司79,12-25K,成都,武侯区,5-10年,硕士,教育培训,20-99人,B轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/113,2026-03-13
+sample-0114,销售经理,成都天府科技有限公司8,5-22K·14薪,成都,锦江区,不限,本科,智能制造,20-99人,C轮及以上,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/114,2026-03-31
+sample-0115,前端开发工程师,成都锦城科技有限公司47,7-20K·14薪,成都,锦江区,3-5年,硕士,金融科技,500-999人,上市公司,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/115,2026-04-08
+sample-0116,销售经理,成都天府科技有限公司72,4-22K,成都,武侯区,3-5年,本科,智能制造,100-499人,A轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/116,2026-04-22
+sample-0117,Java 开发工程师,成都蓉创科技有限公司17,12-21K·13薪,成都,双流区,不限,本科,教育培训,1000-9999人,上市公司,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/117,2026-04-25
+sample-0118,测试工程师,成都锦城科技有限公司3,6-13K·14薪,成都,金牛区,3-5年,大专,软件服务,500-999人,B轮,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/118,2026-03-30
+sample-0119,数据分析师,成都蓉创科技有限公司13,7-17K,成都,成华区,不限,本科,企业服务,100-499人,C轮及以上,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/119,2026-05-25
+sample-0120,运维工程师,成都云智科技有限公司57,8-17K,成都,锦江区,5-10年,本科,智能制造,100-499人,B轮,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/120,2026-03-07
+sample-0121,销售经理,成都天府科技有限公司40,6-24K,成都,青羊区,1-3年,本科,智能制造,1000-9999人,B轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/121,2026-03-27
+sample-0122,产品经理,成都云智科技有限公司33,11-25K,成都,锦江区,5-10年,本科,教育培训,20-99人,上市公司,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/122,2026-05-09
+sample-0123,UI 设计师,成都蓉创科技有限公司58,5-17K,成都,成华区,1-3年,硕士,互联网,100-499人,B轮,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/123,2026-05-14
+sample-0124,测试工程师,成都天府科技有限公司31,5-18K,成都,金牛区,不限,本科,软件服务,20-99人,A轮,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/124,2026-04-14
+sample-0125,Java 开发工程师,成都星河科技有限公司61,10-21K,成都,成华区,5-10年,硕士,教育培训,20-99人,未融资,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/125,2026-05-30
+sample-0126,Python 后端工程师,成都锦城科技有限公司15,12-24K,成都,双流区,1-3年,本科,互联网,20-99人,天使轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/126,2026-03-25
+sample-0127,运维工程师,成都蓉创科技有限公司77,11-22K,成都,天府新区,不限,大专,智能制造,100-499人,A轮,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/127,2026-05-20
+sample-0128,运维工程师,成都云智科技有限公司24,7-20K,成都,双流区,3-5年,不限,教育培训,20-99人,B轮,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/128,2026-03-22
+sample-0129,电商运营,成都云智科技有限公司46,4-17K·13薪,成都,高新区,3-5年,大专,智能制造,20-99人,C轮及以上,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/129,2026-05-02
+sample-0130,测试工程师,成都天府科技有限公司23,6-12K·13薪,成都,金牛区,5-10年,大专,企业服务,100-499人,未融资,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/130,2026-03-26
+sample-0131,电商运营,成都锦城科技有限公司6,4-15K,成都,青羊区,3-5年,硕士,企业服务,1000-9999人,A轮,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/131,2026-05-29
+sample-0132,Python 后端工程师,成都云智科技有限公司35,11-25K·13薪,成都,金牛区,3-5年,硕士,金融科技,1000-9999人,B轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/132,2026-05-28
+sample-0133,测试工程师,成都天府科技有限公司11,6-19K·14薪,成都,成华区,不限,硕士,教育培训,100-499人,C轮及以上,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/133,2026-04-17
+sample-0134,产品经理,成都天府科技有限公司40,10-20K,成都,成华区,5-10年,大专,智能制造,1000-9999人,A轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/134,2026-04-23
+sample-0135,电商运营,成都天府科技有限公司10,4-16K·14薪,成都,高新区,3-5年,大专,互联网,100-499人,C轮及以上,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/135,2026-04-29
+sample-0136,电商运营,成都天府科技有限公司47,4-13K,成都,金牛区,不限,大专,智能制造,1000-9999人,A轮,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/136,2026-05-04
+sample-0137,测试工程师,成都锦城科技有限公司51,8-13K,成都,金牛区,3-5年,大专,互联网,20-99人,上市公司,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/137,2026-03-28
+sample-0138,前端开发工程师,成都星河科技有限公司58,10-23K,成都,成华区,3-5年,硕士,软件服务,20-99人,天使轮,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/138,2026-05-01
+sample-0139,Java 开发工程师,成都云智科技有限公司45,11-21K·14薪,成都,金牛区,3-5年,本科,企业服务,100-499人,上市公司,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/139,2026-05-23
+sample-0140,前端开发工程师,成都天府科技有限公司31,9-20K,成都,锦江区,不限,本科,教育培训,500-999人,B轮,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/140,2026-05-09
+sample-0141,UI 设计师,成都蓉创科技有限公司62,6-14K,成都,双流区,5-10年,硕士,企业服务,20-99人,天使轮,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/141,2026-04-25
+sample-0142,测试工程师,成都蓉创科技有限公司17,5-19K·14薪,成都,金牛区,1-3年,大专,金融科技,20-99人,未融资,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/142,2026-03-08
+sample-0143,UI 设计师,成都锦城科技有限公司29,6-17K,成都,金牛区,3-5年,不限,电子商务,100-499人,上市公司,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/143,2026-05-14
+sample-0144,UI 设计师,成都星河科技有限公司65,7-15K·13薪,成都,武侯区,1-3年,大专,智能制造,500-999人,C轮及以上,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/144,2026-03-17
+sample-0145,Python 后端工程师,成都蓉创科技有限公司27,10-22K,成都,成华区,5-10年,不限,金融科技,500-999人,上市公司,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/145,2026-03-13
+sample-0146,产品经理,成都云智科技有限公司10,11-22K·14薪,成都,天府新区,1-3年,硕士,金融科技,1000-9999人,B轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/146,2026-04-26
+sample-0147,数据分析师,成都星河科技有限公司52,8-17K·13薪,成都,金牛区,3-5年,不限,电子商务,100-499人,B轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/147,2026-04-24
+sample-0148,Java 开发工程师,成都锦城科技有限公司7,10-26K,成都,武侯区,5-10年,硕士,软件服务,100-499人,A轮,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/148,2026-05-16
+sample-0149,销售经理,成都锦城科技有限公司64,6-20K,成都,天府新区,5-10年,不限,互联网,1000-9999人,C轮及以上,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/149,2026-04-01
+sample-0150,电商运营,成都天府科技有限公司37,5-14K·13薪,成都,高新区,5-10年,本科,教育培训,20-99人,未融资,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/150,2026-05-28
+sample-0151,运维工程师,成都天府科技有限公司6,8-19K·13薪,成都,金牛区,不限,大专,电子商务,500-999人,未融资,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/151,2026-04-13
+sample-0152,运维工程师,成都云智科技有限公司17,11-22K·13薪,成都,武侯区,5-10年,本科,企业服务,500-999人,C轮及以上,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/152,2026-03-16
+sample-0153,测试工程师,成都云智科技有限公司6,6-15K·14薪,成都,高新区,1-3年,本科,企业服务,1000-9999人,C轮及以上,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/153,2026-03-31
+sample-0154,电商运营,成都天府科技有限公司21,5-13K·13薪,成都,金牛区,3-5年,本科,教育培训,1000-9999人,上市公司,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/154,2026-03-17
+sample-0155,销售经理,成都天府科技有限公司15,6-24K,成都,金牛区,3-5年,不限,教育培训,1000-9999人,A轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/155,2026-04-17
+sample-0156,销售经理,成都蓉创科技有限公司22,8-20K,成都,天府新区,5-10年,大专,企业服务,100-499人,未融资,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/156,2026-03-21
+sample-0157,销售经理,成都星河科技有限公司54,4-20K,成都,金牛区,5-10年,大专,金融科技,1000-9999人,上市公司,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/157,2026-04-08
+sample-0158,Python 后端工程师,成都天府科技有限公司68,11-24K·13薪,成都,天府新区,3-5年,大专,金融科技,500-999人,C轮及以上,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/158,2026-03-11
+sample-0159,测试工程师,成都锦城科技有限公司72,7-19K,成都,成华区,1-3年,本科,企业服务,500-999人,上市公司,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/159,2026-05-03
+sample-0160,数据分析师,成都云智科技有限公司37,9-20K·14薪,成都,成华区,5-10年,硕士,企业服务,500-999人,天使轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/160,2026-04-20
+sample-0161,产品经理,成都天府科技有限公司33,8-23K,成都,天府新区,1-3年,大专,企业服务,500-999人,C轮及以上,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/161,2026-04-20
+sample-0162,产品经理,成都星河科技有限公司68,9-20K,成都,高新区,1-3年,不限,互联网,1000-9999人,A轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/162,2026-05-03
+sample-0163,电商运营,成都天府科技有限公司53,4-13K,成都,锦江区,5-10年,大专,企业服务,500-999人,A轮,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/163,2026-03-25
+sample-0164,产品经理,成都天府科技有限公司23,8-20K,成都,高新区,1-3年,不限,企业服务,1000-9999人,B轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/164,2026-03-27
+sample-0165,前端开发工程师,成都锦城科技有限公司43,9-17K,成都,武侯区,5-10年,硕士,软件服务,1000-9999人,A轮,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/165,2026-04-26
+sample-0166,数据分析师,成都云智科技有限公司24,6-20K,成都,成华区,3-5年,本科,教育培训,100-499人,天使轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/166,2026-04-06
+sample-0167,销售经理,成都星河科技有限公司13,7-23K·13薪,成都,双流区,1-3年,硕士,电子商务,100-499人,未融资,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/167,2026-05-23
+sample-0168,产品经理,成都蓉创科技有限公司39,11-22K·14薪,成都,金牛区,不限,本科,智能制造,500-999人,上市公司,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/168,2026-04-30
+sample-0169,数据分析师,成都蓉创科技有限公司52,6-16K·14薪,成都,锦江区,3-5年,不限,智能制造,500-999人,A轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/169,2026-04-25
+sample-0170,销售经理,成都蓉创科技有限公司59,5-20K,成都,锦江区,3-5年,硕士,智能制造,1000-9999人,C轮及以上,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/170,2026-04-03
+sample-0171,数据分析师,成都蓉创科技有限公司10,7-16K·14薪,成都,金牛区,不限,不限,企业服务,100-499人,C轮及以上,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/171,2026-03-28
+sample-0172,UI 设计师,成都星河科技有限公司15,6-15K·13薪,成都,天府新区,5-10年,不限,教育培训,1000-9999人,未融资,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/172,2026-03-29
+sample-0173,电商运营,成都天府科技有限公司72,5-17K·14薪,成都,高新区,3-5年,不限,金融科技,500-999人,未融资,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/173,2026-03-23
+sample-0174,数据分析师,成都蓉创科技有限公司9,10-16K,成都,金牛区,不限,不限,金融科技,20-99人,A轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/174,2026-04-10
+sample-0175,运维工程师,成都天府科技有限公司58,8-17K·14薪,成都,双流区,5-10年,不限,智能制造,100-499人,上市公司,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/175,2026-04-17
+sample-0176,测试工程师,成都云智科技有限公司29,5-14K·14薪,成都,锦江区,不限,本科,金融科技,1000-9999人,C轮及以上,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/176,2026-03-28
+sample-0177,运维工程师,成都星河科技有限公司36,8-18K·14薪,成都,锦江区,不限,不限,企业服务,1000-9999人,C轮及以上,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/177,2026-04-20
+sample-0178,Python 后端工程师,成都蓉创科技有限公司58,11-24K,成都,高新区,不限,大专,智能制造,20-99人,B轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/178,2026-05-22
+sample-0179,电商运营,成都蓉创科技有限公司30,5-14K,成都,成华区,3-5年,本科,软件服务,500-999人,天使轮,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/179,2026-05-17
+sample-0180,UI 设计师,成都蓉创科技有限公司72,6-19K·13薪,成都,高新区,1-3年,硕士,教育培训,1000-9999人,未融资,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/180,2026-04-29
+sample-0181,测试工程师,成都天府科技有限公司39,8-17K·14薪,成都,锦江区,1-3年,硕士,软件服务,100-499人,A轮,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/181,2026-04-12
+sample-0182,前端开发工程师,成都星河科技有限公司50,10-17K·14薪,成都,锦江区,3-5年,大专,电子商务,20-99人,B轮,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/182,2026-04-11
+sample-0183,测试工程师,成都蓉创科技有限公司78,5-15K,成都,双流区,不限,不限,软件服务,100-499人,B轮,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/183,2026-04-30
+sample-0184,数据分析师,成都天府科技有限公司16,8-19K,成都,青羊区,1-3年,大专,金融科技,100-499人,C轮及以上,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/184,2026-05-07
+sample-0185,测试工程师,成都锦城科技有限公司40,7-18K·14薪,成都,金牛区,3-5年,硕士,金融科技,20-99人,上市公司,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/185,2026-03-27
+sample-0186,电商运营,成都蓉创科技有限公司6,6-14K·13薪,成都,双流区,1-3年,大专,互联网,500-999人,C轮及以上,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/186,2026-04-24
+sample-0187,销售经理,成都星河科技有限公司43,8-23K·13薪,成都,青羊区,5-10年,大专,金融科技,500-999人,A轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/187,2026-05-15
+sample-0188,电商运营,成都蓉创科技有限公司18,7-18K,成都,锦江区,5-10年,大专,教育培训,20-99人,C轮及以上,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/188,2026-04-19
+sample-0189,Python 后端工程师,成都云智科技有限公司30,10-21K,成都,锦江区,1-3年,不限,软件服务,1000-9999人,A轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/189,2026-04-12
+sample-0190,Python 后端工程师,成都蓉创科技有限公司69,14-28K·14薪,成都,高新区,5-10年,不限,互联网,500-999人,C轮及以上,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/190,2026-06-01
+sample-0191,产品经理,成都星河科技有限公司68,8-25K,成都,武侯区,1-3年,大专,教育培训,500-999人,A轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/191,2026-05-21
+sample-0192,产品经理,成都星河科技有限公司73,11-20K·13薪,成都,天府新区,1-3年,本科,智能制造,20-99人,上市公司,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/192,2026-04-13
+sample-0193,Python 后端工程师,成都云智科技有限公司8,10-27K·14薪,成都,天府新区,1-3年,不限,金融科技,1000-9999人,上市公司,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/193,2026-04-16
+sample-0194,测试工程师,成都天府科技有限公司73,9-13K,成都,青羊区,3-5年,不限,互联网,500-999人,C轮及以上,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/194,2026-05-05
+sample-0195,销售经理,成都星河科技有限公司76,4-19K·13薪,成都,青羊区,5-10年,不限,电子商务,100-499人,C轮及以上,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/195,2026-06-01
+sample-0196,数据分析师,成都蓉创科技有限公司11,10-21K·13薪,成都,锦江区,3-5年,不限,互联网,1000-9999人,天使轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/196,2026-04-15
+sample-0197,Java 开发工程师,成都天府科技有限公司58,10-25K·13薪,成都,成华区,1-3年,本科,教育培训,1000-9999人,B轮,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/197,2026-05-31
+sample-0198,前端开发工程师,成都云智科技有限公司32,11-23K,成都,成华区,不限,本科,软件服务,1000-9999人,上市公司,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/198,2026-03-16
+sample-0199,前端开发工程师,成都锦城科技有限公司1,10-22K·13薪,成都,武侯区,5-10年,本科,企业服务,500-999人,未融资,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/199,2026-05-21
+sample-0200,前端开发工程师,成都云智科技有限公司14,7-19K·14薪,成都,双流区,不限,本科,教育培训,20-99人,C轮及以上,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/200,2026-04-07
+sample-0201,销售经理,成都云智科技有限公司50,6-23K,成都,双流区,1-3年,大专,智能制造,1000-9999人,天使轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/201,2026-04-27
+sample-0202,前端开发工程师,成都星河科技有限公司9,9-21K·13薪,成都,锦江区,5-10年,本科,金融科技,500-999人,B轮,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/202,2026-04-01
+sample-0203,Java 开发工程师,成都蓉创科技有限公司77,10-23K,成都,天府新区,1-3年,硕士,互联网,100-499人,A轮,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/203,2026-03-15
+sample-0204,Python 后端工程师,成都天府科技有限公司43,13-26K·14薪,成都,天府新区,1-3年,本科,电子商务,100-499人,B轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/204,2026-04-22
+sample-0205,测试工程师,成都星河科技有限公司74,6-18K·13薪,成都,天府新区,3-5年,硕士,电子商务,1000-9999人,A轮,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/205,2026-04-27
+sample-0206,Java 开发工程师,成都星河科技有限公司60,12-22K,成都,高新区,5-10年,本科,企业服务,20-99人,B轮,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/206,2026-03-08
+sample-0207,电商运营,成都天府科技有限公司55,5-15K,成都,锦江区,不限,硕士,教育培训,1000-9999人,C轮及以上,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/207,2026-05-02
+sample-0208,运维工程师,成都星河科技有限公司14,11-21K,成都,武侯区,3-5年,大专,智能制造,20-99人,C轮及以上,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/208,2026-04-18
+sample-0209,运维工程师,成都星河科技有限公司34,9-21K,成都,武侯区,1-3年,硕士,电子商务,1000-9999人,B轮,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/209,2026-06-02
+sample-0210,销售经理,成都锦城科技有限公司14,8-19K·13薪,成都,天府新区,5-10年,不限,互联网,100-499人,A轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/210,2026-05-31
+sample-0211,产品经理,成都天府科技有限公司45,10-26K,成都,天府新区,不限,硕士,智能制造,1000-9999人,A轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/211,2026-03-29
+sample-0212,Java 开发工程师,成都星河科技有限公司14,10-19K,成都,金牛区,1-3年,大专,教育培训,100-499人,A轮,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/212,2026-06-01
+sample-0213,UI 设计师,成都天府科技有限公司24,8-20K,成都,锦江区,5-10年,不限,智能制造,100-499人,B轮,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/213,2026-04-13
+sample-0214,销售经理,成都云智科技有限公司36,7-23K,成都,青羊区,不限,大专,电子商务,500-999人,天使轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/214,2026-05-07
+sample-0215,电商运营,成都天府科技有限公司77,4-15K·14薪,成都,金牛区,5-10年,不限,电子商务,500-999人,B轮,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/215,2026-03-28
+sample-0216,销售经理,成都云智科技有限公司41,5-21K,成都,锦江区,1-3年,本科,互联网,100-499人,A轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/216,2026-03-09
+sample-0217,前端开发工程师,成都天府科技有限公司74,11-23K·14薪,成都,锦江区,5-10年,大专,金融科技,100-499人,C轮及以上,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/217,2026-03-19
+sample-0218,前端开发工程师,成都蓉创科技有限公司58,10-21K,成都,金牛区,不限,本科,互联网,1000-9999人,天使轮,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/218,2026-05-11
+sample-0219,数据分析师,成都天府科技有限公司54,9-22K·14薪,成都,天府新区,5-10年,大专,互联网,20-99人,天使轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/219,2026-03-08
+sample-0220,产品经理,成都天府科技有限公司22,8-23K,成都,成华区,5-10年,不限,教育培训,20-99人,A轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/220,2026-03-27
+sample-0221,UI 设计师,成都云智科技有限公司55,7-13K·14薪,成都,青羊区,1-3年,本科,企业服务,20-99人,B轮,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/221,2026-03-26
+sample-0222,产品经理,成都蓉创科技有限公司27,10-20K·14薪,成都,青羊区,3-5年,硕士,软件服务,100-499人,天使轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/222,2026-05-19
+sample-0223,数据分析师,成都锦城科技有限公司42,6-20K·13薪,成都,锦江区,3-5年,本科,企业服务,20-99人,天使轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/223,2026-03-19
+sample-0224,运维工程师,成都星河科技有限公司32,7-19K,成都,锦江区,3-5年,大专,企业服务,1000-9999人,B轮,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/224,2026-03-06
+sample-0225,前端开发工程师,成都云智科技有限公司10,11-21K·14薪,成都,天府新区,5-10年,本科,智能制造,500-999人,B轮,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/225,2026-04-16
+sample-0226,电商运营,成都蓉创科技有限公司9,6-11K,成都,金牛区,5-10年,大专,金融科技,100-499人,B轮,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/226,2026-04-06
+sample-0227,产品经理,成都天府科技有限公司73,10-23K·13薪,成都,锦江区,3-5年,不限,互联网,20-99人,上市公司,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/227,2026-03-25
+sample-0228,电商运营,成都天府科技有限公司1,4-12K,成都,天府新区,1-3年,大专,智能制造,500-999人,天使轮,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/228,2026-04-08
+sample-0229,产品经理,成都云智科技有限公司22,8-24K·13薪,成都,金牛区,5-10年,本科,智能制造,100-499人,B轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/229,2026-05-24
+sample-0230,Java 开发工程师,成都蓉创科技有限公司17,8-19K,成都,武侯区,1-3年,硕士,互联网,20-99人,上市公司,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/230,2026-04-03
+sample-0231,测试工程师,成都天府科技有限公司30,5-18K,成都,武侯区,不限,不限,互联网,500-999人,A轮,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/231,2026-04-03
+sample-0232,产品经理,成都蓉创科技有限公司9,9-25K,成都,锦江区,不限,大专,金融科技,500-999人,上市公司,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/232,2026-03-13
+sample-0233,数据分析师,成都星河科技有限公司13,7-21K·14薪,成都,武侯区,不限,硕士,电子商务,1000-9999人,A轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/233,2026-05-07
+sample-0234,前端开发工程师,成都锦城科技有限公司4,8-21K,成都,成华区,1-3年,大专,智能制造,1000-9999人,A轮,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/234,2026-05-03
+sample-0235,Python 后端工程师,成都蓉创科技有限公司64,11-28K·14薪,成都,青羊区,不限,不限,电子商务,500-999人,天使轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/235,2026-05-20
+sample-0236,运维工程师,成都云智科技有限公司61,11-21K·13薪,成都,锦江区,不限,不限,互联网,500-999人,天使轮,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/236,2026-03-26
+sample-0237,Python 后端工程师,成都天府科技有限公司55,10-27K·13薪,成都,双流区,不限,大专,电子商务,20-99人,A轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/237,2026-03-15
+sample-0238,Java 开发工程师,成都蓉创科技有限公司51,12-22K,成都,金牛区,不限,本科,智能制造,1000-9999人,上市公司,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/238,2026-03-27
+sample-0239,数据分析师,成都蓉创科技有限公司59,6-18K,成都,武侯区,不限,本科,智能制造,100-499人,未融资,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/239,2026-04-09
+sample-0240,Python 后端工程师,成都蓉创科技有限公司67,11-21K,成都,金牛区,3-5年,大专,电子商务,100-499人,上市公司,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/240,2026-04-01
+sample-0241,产品经理,成都云智科技有限公司68,8-19K·13薪,成都,成华区,3-5年,不限,金融科技,1000-9999人,C轮及以上,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/241,2026-04-10
+sample-0242,测试工程师,成都云智科技有限公司33,5-19K,成都,锦江区,不限,大专,智能制造,20-99人,未融资,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/242,2026-04-17
+sample-0243,Python 后端工程师,成都星河科技有限公司20,11-21K·14薪,成都,双流区,不限,硕士,软件服务,500-999人,天使轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/243,2026-04-18
+sample-0244,运维工程师,成都蓉创科技有限公司16,9-19K,成都,金牛区,不限,大专,软件服务,20-99人,B轮,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/244,2026-03-22
+sample-0245,Java 开发工程师,成都天府科技有限公司71,11-23K·13薪,成都,武侯区,不限,本科,软件服务,500-999人,C轮及以上,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/245,2026-04-23
+sample-0246,产品经理,成都蓉创科技有限公司26,12-22K·14薪,成都,天府新区,1-3年,大专,互联网,1000-9999人,未融资,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/246,2026-04-17
+sample-0247,数据分析师,成都锦城科技有限公司49,10-20K,成都,高新区,不限,大专,教育培训,100-499人,B轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/247,2026-04-22
+sample-0248,电商运营,成都蓉创科技有限公司30,4-13K·13薪,成都,高新区,5-10年,本科,金融科技,20-99人,C轮及以上,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/248,2026-05-23
+sample-0249,Java 开发工程师,成都星河科技有限公司56,12-21K·14薪,成都,高新区,1-3年,本科,电子商务,500-999人,B轮,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/249,2026-05-25
+sample-0250,测试工程师,成都星河科技有限公司26,7-19K·13薪,成都,武侯区,不限,大专,互联网,100-499人,B轮,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/250,2026-05-05
+sample-0251,电商运营,成都天府科技有限公司27,6-17K,成都,金牛区,3-5年,硕士,电子商务,20-99人,未融资,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/251,2026-03-27
+sample-0252,前端开发工程师,成都星河科技有限公司12,9-17K,成都,锦江区,3-5年,硕士,教育培训,20-99人,上市公司,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/252,2026-04-23
+sample-0253,产品经理,成都蓉创科技有限公司72,10-21K,成都,天府新区,1-3年,不限,金融科技,20-99人,天使轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/253,2026-04-13
+sample-0254,Java 开发工程师,成都锦城科技有限公司52,8-19K,成都,青羊区,不限,本科,企业服务,20-99人,未融资,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/254,2026-05-18
+sample-0255,Java 开发工程师,成都云智科技有限公司16,9-26K,成都,金牛区,5-10年,不限,软件服务,1000-9999人,上市公司,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/255,2026-05-23
+sample-0256,运维工程师,成都锦城科技有限公司23,10-15K·14薪,成都,双流区,1-3年,大专,电子商务,500-999人,B轮,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/256,2026-03-08
+sample-0257,前端开发工程师,成都天府科技有限公司71,7-20K·13薪,成都,双流区,不限,不限,电子商务,1000-9999人,天使轮,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/257,2026-04-01
+sample-0258,运维工程师,成都蓉创科技有限公司62,8-18K,成都,金牛区,5-10年,本科,教育培训,500-999人,B轮,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/258,2026-04-16
+sample-0259,产品经理,成都锦城科技有限公司4,9-19K·13薪,成都,青羊区,不限,硕士,教育培训,500-999人,C轮及以上,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/259,2026-03-19
+sample-0260,数据分析师,成都蓉创科技有限公司35,7-16K,成都,青羊区,不限,大专,教育培训,1000-9999人,A轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/260,2026-03-11
+sample-0261,前端开发工程师,成都云智科技有限公司76,8-20K·13薪,成都,金牛区,3-5年,大专,教育培训,100-499人,B轮,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/261,2026-03-06
+sample-0262,UI 设计师,成都星河科技有限公司8,7-15K·14薪,成都,武侯区,1-3年,不限,教育培训,1000-9999人,未融资,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/262,2026-05-30
+sample-0263,测试工程师,成都云智科技有限公司42,9-15K,成都,锦江区,不限,大专,教育培训,100-499人,未融资,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/263,2026-04-21
+sample-0264,UI 设计师,成都云智科技有限公司76,7-14K·13薪,成都,双流区,3-5年,本科,电子商务,100-499人,天使轮,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/264,2026-03-11
+sample-0265,运维工程师,成都蓉创科技有限公司29,10-20K,成都,金牛区,1-3年,硕士,电子商务,500-999人,天使轮,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/265,2026-03-24
+sample-0266,前端开发工程师,成都星河科技有限公司79,7-23K,成都,金牛区,不限,硕士,软件服务,500-999人,上市公司,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/266,2026-05-11
+sample-0267,Java 开发工程师,成都天府科技有限公司43,9-24K·13薪,成都,武侯区,不限,本科,软件服务,100-499人,上市公司,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/267,2026-05-13
+sample-0268,Java 开发工程师,成都天府科技有限公司50,10-23K,成都,高新区,5-10年,大专,金融科技,1000-9999人,B轮,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/268,2026-06-03
+sample-0269,测试工程师,成都天府科技有限公司21,9-18K,成都,青羊区,不限,不限,电子商务,20-99人,A轮,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/269,2026-04-03
+sample-0270,产品经理,成都云智科技有限公司21,8-20K·13薪,成都,双流区,不限,本科,教育培训,1000-9999人,上市公司,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/270,2026-05-13
+sample-0271,Python 后端工程师,成都锦城科技有限公司13,13-23K·14薪,成都,高新区,1-3年,大专,金融科技,500-999人,上市公司,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/271,2026-05-14
+sample-0272,产品经理,成都蓉创科技有限公司74,10-22K,成都,双流区,5-10年,大专,互联网,500-999人,未融资,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/272,2026-05-28
+sample-0273,运维工程师,成都星河科技有限公司4,7-19K·14薪,成都,武侯区,1-3年,本科,互联网,1000-9999人,未融资,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/273,2026-05-09
+sample-0274,产品经理,成都蓉创科技有限公司12,11-26K·14薪,成都,成华区,5-10年,大专,电子商务,1000-9999人,A轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/274,2026-03-11
+sample-0275,前端开发工程师,成都星河科技有限公司34,10-17K·13薪,成都,天府新区,3-5年,不限,软件服务,20-99人,未融资,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/275,2026-04-08
+sample-0276,测试工程师,成都蓉创科技有限公司50,9-18K,成都,高新区,5-10年,硕士,教育培训,100-499人,B轮,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/276,2026-03-25
+sample-0277,产品经理,成都天府科技有限公司16,8-25K,成都,锦江区,1-3年,大专,软件服务,100-499人,天使轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/277,2026-03-31
+sample-0278,Python 后端工程师,成都锦城科技有限公司77,13-22K·14薪,成都,锦江区,3-5年,不限,互联网,1000-9999人,C轮及以上,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/278,2026-05-09
+sample-0279,运维工程师,成都蓉创科技有限公司2,11-20K·13薪,成都,天府新区,5-10年,不限,金融科技,100-499人,天使轮,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/279,2026-03-29
+sample-0280,销售经理,成都蓉创科技有限公司37,8-18K,成都,武侯区,3-5年,硕士,电子商务,1000-9999人,上市公司,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/280,2026-03-23
+sample-0281,电商运营,成都星河科技有限公司52,8-18K,成都,成华区,5-10年,不限,金融科技,500-999人,上市公司,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/281,2026-05-12
+sample-0282,数据分析师,成都锦城科技有限公司44,6-22K·13薪,成都,高新区,3-5年,本科,企业服务,1000-9999人,上市公司,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/282,2026-04-17
+sample-0283,Java 开发工程师,成都天府科技有限公司35,9-21K·13薪,成都,金牛区,不限,大专,金融科技,100-499人,B轮,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/283,2026-04-08
+sample-0284,电商运营,成都锦城科技有限公司9,8-16K,成都,锦江区,5-10年,大专,企业服务,20-99人,天使轮,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/284,2026-03-30
+sample-0285,数据分析师,成都锦城科技有限公司7,7-15K,成都,天府新区,1-3年,本科,电子商务,1000-9999人,C轮及以上,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/285,2026-05-30
+sample-0286,运维工程师,成都天府科技有限公司77,7-15K,成都,天府新区,1-3年,硕士,教育培训,500-999人,A轮,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/286,2026-04-17
+sample-0287,前端开发工程师,成都星河科技有限公司7,9-18K·13薪,成都,双流区,1-3年,大专,智能制造,100-499人,上市公司,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/287,2026-05-31
+sample-0288,数据分析师,成都星河科技有限公司61,8-21K,成都,高新区,1-3年,不限,软件服务,500-999人,C轮及以上,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/288,2026-03-08
+sample-0289,产品经理,成都星河科技有限公司33,10-25K·14薪,成都,天府新区,5-10年,本科,智能制造,1000-9999人,C轮及以上,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/289,2026-04-20
+sample-0290,Java 开发工程师,成都云智科技有限公司62,8-24K·13薪,成都,武侯区,3-5年,本科,智能制造,500-999人,A轮,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/290,2026-04-26
+sample-0291,产品经理,成都蓉创科技有限公司8,10-22K,成都,青羊区,5-10年,本科,智能制造,100-499人,上市公司,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/291,2026-03-29
+sample-0292,Python 后端工程师,成都云智科技有限公司50,13-25K·13薪,成都,双流区,1-3年,本科,智能制造,100-499人,上市公司,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/292,2026-04-11
+sample-0293,UI 设计师,成都云智科技有限公司38,8-18K·13薪,成都,锦江区,5-10年,大专,智能制造,500-999人,上市公司,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/293,2026-05-13
+sample-0294,UI 设计师,成都锦城科技有限公司29,6-18K,成都,金牛区,5-10年,本科,电子商务,500-999人,C轮及以上,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/294,2026-05-06
+sample-0295,产品经理,成都星河科技有限公司61,11-20K·14薪,成都,武侯区,不限,硕士,教育培训,500-999人,B轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/295,2026-05-28
+sample-0296,Python 后端工程师,成都天府科技有限公司73,11-23K,成都,双流区,1-3年,本科,企业服务,100-499人,未融资,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/296,2026-04-21
+sample-0297,电商运营,成都天府科技有限公司1,6-13K·13薪,成都,高新区,3-5年,大专,企业服务,100-499人,C轮及以上,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/297,2026-03-14
+sample-0298,前端开发工程师,成都天府科技有限公司55,10-18K,成都,双流区,5-10年,硕士,金融科技,20-99人,未融资,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/298,2026-03-17
+sample-0299,UI 设计师,成都云智科技有限公司3,6-18K,成都,青羊区,1-3年,大专,智能制造,500-999人,A轮,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/299,2026-04-23
+sample-0300,前端开发工程师,成都锦城科技有限公司6,7-23K·13薪,成都,武侯区,3-5年,硕士,智能制造,500-999人,B轮,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/300,2026-05-13
+sample-0301,前端开发工程师,成都云智科技有限公司52,9-24K·13薪,成都,锦江区,1-3年,大专,智能制造,100-499人,天使轮,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/301,2026-05-10
+sample-0302,Python 后端工程师,成都锦城科技有限公司49,14-23K,成都,高新区,不限,不限,智能制造,20-99人,上市公司,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/302,2026-04-18
+sample-0303,Python 后端工程师,成都蓉创科技有限公司16,10-22K·14薪,成都,双流区,3-5年,硕士,智能制造,100-499人,天使轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/303,2026-04-08
+sample-0304,Python 后端工程师,成都蓉创科技有限公司80,12-27K,成都,成华区,1-3年,硕士,企业服务,20-99人,C轮及以上,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/304,2026-03-11
+sample-0305,销售经理,成都蓉创科技有限公司26,4-21K,成都,天府新区,1-3年,本科,企业服务,100-499人,A轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/305,2026-05-21
+sample-0306,运维工程师,成都天府科技有限公司27,9-17K,成都,天府新区,3-5年,大专,互联网,20-99人,上市公司,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/306,2026-03-25
+sample-0307,Java 开发工程师,成都锦城科技有限公司13,8-26K,成都,武侯区,1-3年,硕士,电子商务,500-999人,B轮,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/307,2026-05-23
+sample-0308,Python 后端工程师,成都天府科技有限公司41,10-23K,成都,金牛区,不限,不限,企业服务,20-99人,未融资,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/308,2026-04-27
+sample-0309,前端开发工程师,成都锦城科技有限公司12,8-22K·13薪,成都,成华区,3-5年,大专,互联网,1000-9999人,B轮,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/309,2026-04-08
+sample-0310,电商运营,成都星河科技有限公司15,6-17K·14薪,成都,锦江区,不限,大专,互联网,1000-9999人,C轮及以上,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/310,2026-04-11
+sample-0311,电商运营,成都蓉创科技有限公司46,8-18K,成都,双流区,不限,大专,金融科技,1000-9999人,未融资,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/311,2026-03-17
+sample-0312,运维工程师,成都蓉创科技有限公司2,10-15K,成都,金牛区,1-3年,本科,教育培训,20-99人,B轮,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/312,2026-05-01
+sample-0313,数据分析师,成都星河科技有限公司2,9-20K·14薪,成都,高新区,5-10年,硕士,企业服务,100-499人,未融资,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/313,2026-05-15
+sample-0314,电商运营,成都星河科技有限公司65,6-14K·13薪,成都,高新区,5-10年,硕士,企业服务,100-499人,未融资,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/314,2026-04-29
+sample-0315,电商运营,成都云智科技有限公司41,7-18K,成都,天府新区,5-10年,不限,互联网,1000-9999人,B轮,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/315,2026-04-01
+sample-0316,Python 后端工程师,成都蓉创科技有限公司66,14-21K,成都,成华区,1-3年,硕士,电子商务,500-999人,未融资,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/316,2026-03-18
+sample-0317,数据分析师,成都云智科技有限公司58,9-20K·14薪,成都,金牛区,不限,大专,互联网,500-999人,A轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/317,2026-03-11
+sample-0318,产品经理,成都星河科技有限公司64,12-24K,成都,锦江区,5-10年,不限,电子商务,100-499人,天使轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/318,2026-05-29
+sample-0319,Java 开发工程师,成都天府科技有限公司14,11-22K·14薪,成都,金牛区,不限,不限,企业服务,1000-9999人,B轮,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/319,2026-05-10
+sample-0320,销售经理,成都天府科技有限公司71,8-19K·14薪,成都,高新区,5-10年,大专,智能制造,100-499人,上市公司,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/320,2026-06-03
+sample-0321,前端开发工程师,成都蓉创科技有限公司54,7-23K·13薪,成都,双流区,1-3年,本科,金融科技,500-999人,A轮,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/321,2026-03-31
+sample-0322,电商运营,成都锦城科技有限公司71,5-13K·14薪,成都,成华区,1-3年,大专,软件服务,500-999人,上市公司,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/322,2026-03-18
+sample-0323,测试工程师,成都天府科技有限公司72,6-14K·13薪,成都,金牛区,5-10年,本科,企业服务,1000-9999人,未融资,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/323,2026-05-20
+sample-0324,UI 设计师,成都星河科技有限公司8,5-13K·14薪,成都,高新区,3-5年,大专,电子商务,500-999人,天使轮,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/324,2026-05-16
+sample-0325,Python 后端工程师,成都蓉创科技有限公司14,12-24K,成都,天府新区,1-3年,硕士,软件服务,500-999人,上市公司,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/325,2026-04-19
+sample-0326,Python 后端工程师,成都云智科技有限公司71,13-27K·14薪,成都,金牛区,不限,本科,软件服务,1000-9999人,天使轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/326,2026-03-08
+sample-0327,测试工程师,成都云智科技有限公司23,9-15K,成都,天府新区,1-3年,大专,智能制造,20-99人,B轮,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/327,2026-04-27
+sample-0328,Python 后端工程师,成都锦城科技有限公司75,13-25K·13薪,成都,锦江区,不限,本科,金融科技,100-499人,未融资,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/328,2026-05-18
+sample-0329,前端开发工程师,成都锦城科技有限公司10,9-17K·13薪,成都,金牛区,1-3年,大专,教育培训,20-99人,C轮及以上,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/329,2026-04-02
+sample-0330,前端开发工程师,成都锦城科技有限公司28,10-23K,成都,青羊区,3-5年,本科,电子商务,100-499人,C轮及以上,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/330,2026-04-20
+sample-0331,UI 设计师,成都星河科技有限公司58,8-13K,成都,金牛区,1-3年,不限,智能制造,500-999人,B轮,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/331,2026-03-10
+sample-0332,Java 开发工程师,成都蓉创科技有限公司66,11-23K·13薪,成都,金牛区,5-10年,硕士,互联网,500-999人,上市公司,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/332,2026-05-31
+sample-0333,数据分析师,成都星河科技有限公司9,8-16K,成都,高新区,1-3年,硕士,企业服务,20-99人,天使轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/333,2026-05-13
+sample-0334,UI 设计师,成都云智科技有限公司43,8-14K,成都,天府新区,不限,不限,互联网,100-499人,A轮,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/334,2026-05-31
+sample-0335,UI 设计师,成都天府科技有限公司58,5-16K·13薪,成都,双流区,5-10年,本科,互联网,1000-9999人,上市公司,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/335,2026-04-12
+sample-0336,Java 开发工程师,成都锦城科技有限公司10,12-19K,成都,高新区,不限,本科,企业服务,500-999人,C轮及以上,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/336,2026-03-21
+sample-0337,Java 开发工程师,成都星河科技有限公司61,10-26K·14薪,成都,高新区,1-3年,大专,智能制造,1000-9999人,C轮及以上,"Java,Spring Boot,MySQL,Redis,Linux",负责 Java 后端系统开发，熟悉 Spring Boot、MySQL、Redis 和 Linux。,sample,https://example.invalid/jobs/337,2026-04-14
+sample-0338,产品经理,成都云智科技有限公司16,9-23K·13薪,成都,锦江区,不限,硕士,教育培训,20-99人,A轮,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/338,2026-06-02
+sample-0339,数据分析师,成都星河科技有限公司21,8-18K·14薪,成都,锦江区,1-3年,本科,软件服务,20-99人,天使轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/339,2026-03-13
+sample-0340,销售经理,成都云智科技有限公司33,4-24K,成都,武侯区,1-3年,硕士,电子商务,500-999人,天使轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/340,2026-04-27
+sample-0341,数据分析师,成都天府科技有限公司63,6-19K,成都,金牛区,3-5年,本科,智能制造,100-499人,C轮及以上,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/341,2026-05-10
+sample-0342,销售经理,成都星河科技有限公司41,6-22K·14薪,成都,高新区,1-3年,硕士,电子商务,500-999人,天使轮,"销售,客户沟通,渠道拓展",负责客户开发、商务谈判和渠道拓展，具备较强客户沟通能力。,sample,https://example.invalid/jobs/342,2026-05-13
+sample-0343,测试工程师,成都蓉创科技有限公司63,8-19K·14薪,成都,成华区,不限,大专,智能制造,20-99人,A轮,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/343,2026-04-19
+sample-0344,前端开发工程师,成都云智科技有限公司10,11-20K·13薪,成都,武侯区,不限,硕士,企业服务,100-499人,未融资,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/344,2026-03-15
+sample-0345,UI 设计师,成都蓉创科技有限公司29,7-20K,成都,双流区,3-5年,大专,金融科技,20-99人,B轮,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/345,2026-04-18
+sample-0346,测试工程师,成都星河科技有限公司66,9-12K,成都,锦江区,5-10年,大专,软件服务,100-499人,上市公司,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/346,2026-03-17
+sample-0347,电商运营,成都锦城科技有限公司9,6-11K,成都,青羊区,3-5年,大专,互联网,100-499人,C轮及以上,"电商运营,Excel,数据分析,用户增长",负责店铺运营、活动策划和数据复盘，具备电商平台运营经验。,sample,https://example.invalid/jobs/347,2026-04-02
+sample-0348,测试工程师,成都云智科技有限公司42,8-19K·14薪,成都,高新区,3-5年,本科,教育培训,100-499人,B轮,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/348,2026-05-29
+sample-0349,运维工程师,成都天府科技有限公司67,9-16K·13薪,成都,青羊区,3-5年,本科,金融科技,1000-9999人,C轮及以上,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/349,2026-04-16
+sample-0350,Python 后端工程师,成都蓉创科技有限公司10,14-23K·14薪,成都,青羊区,3-5年,大专,软件服务,100-499人,天使轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/350,2026-05-13
+sample-0351,测试工程师,成都天府科技有限公司15,9-13K,成都,金牛区,5-10年,硕士,软件服务,100-499人,上市公司,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/351,2026-04-11
+sample-0352,运维工程师,成都蓉创科技有限公司18,7-18K,成都,锦江区,不限,大专,互联网,100-499人,A轮,"Linux,Docker,Kubernetes,Redis,MySQL",负责系统部署、监控和故障处理，熟悉 Linux、Docker 和 Kubernetes。,sample,https://example.invalid/jobs/352,2026-05-18
+sample-0353,前端开发工程师,成都星河科技有限公司11,11-23K,成都,成华区,5-10年,硕士,企业服务,1000-9999人,天使轮,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/353,2026-03-11
+sample-0354,数据分析师,成都锦城科技有限公司22,9-17K,成都,成华区,5-10年,不限,软件服务,1000-9999人,B轮,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/354,2026-03-16
+sample-0355,前端开发工程师,成都蓉创科技有限公司20,7-17K,成都,双流区,不限,大专,金融科技,20-99人,C轮及以上,"JavaScript,TypeScript,React,Vue",负责 Web 前端开发，熟悉 React 或 Vue，有 TypeScript 项目经验。,sample,https://example.invalid/jobs/355,2026-03-29
+sample-0356,UI 设计师,成都蓉创科技有限公司78,5-14K·14薪,成都,锦江区,不限,硕士,教育培训,1000-9999人,A轮,"Figma,Photoshop,原型设计",负责产品界面设计、设计规范维护和交互细节优化，熟悉 Figma。,sample,https://example.invalid/jobs/356,2026-03-11
+sample-0357,Python 后端工程师,成都蓉创科技有限公司45,14-27K,成都,双流区,不限,硕士,软件服务,500-999人,B轮,"Python,FastAPI,PostgreSQL,Redis,Docker",负责业务后端服务开发，使用 Python、FastAPI、SQL、Redis 构建稳定接口。,sample,https://example.invalid/jobs/357,2026-04-03
+sample-0358,数据分析师,成都云智科技有限公司1,6-19K·14薪,成都,青羊区,不限,不限,金融科技,100-499人,上市公司,"SQL,Python,Excel,Tableau,数据分析,数据可视化",负责业务数据分析、指标体系建设和数据可视化，熟练 SQL、Excel 和 Python。,sample,https://example.invalid/jobs/358,2026-05-02
+sample-0359,测试工程师,成都锦城科技有限公司75,8-17K,成都,双流区,3-5年,硕士,教育培训,500-999人,C轮及以上,"Python,SQL,Linux",负责接口测试、自动化测试和质量保障，熟悉 Python 脚本和 SQL。,sample,https://example.invalid/jobs/359,2026-05-15
+sample-0360,产品经理,成都锦城科技有限公司23,11-22K·14薪,成都,天府新区,5-10年,本科,电子商务,500-999人,上市公司,"需求分析,原型设计,项目管理,Figma",负责需求分析、产品规划和项目推进，熟悉原型设计和跨团队沟通。,sample,https://example.invalid/jobs/360,2026-03-25

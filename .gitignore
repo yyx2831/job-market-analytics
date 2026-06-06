@@ -1,0 +1,28 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Database files
+data/processed/*.db
+data/processed/*.sqlite
+data/*.db
+
+# Generated raw data
+data/raw/job51_*.jsonl
+data/raw/2026-*/
+data/raw/progress/
+
+# Processed outputs
+data/processed/*.csv
+data/processed/reports/
+data/normalized/
+
+# Logs
+logs/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
