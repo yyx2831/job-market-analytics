@@ -63,8 +63,7 @@ def run_job51_xbrowser(city: str, keywords: list[str], limit: int) -> None:
     collector = Job51XBrowserCollector(
         output_dir=RAW_DIR,
         max_pages=50,
-        rate_min=1.5,
-        rate_max=3.0,
+        # 使用类默认的 WAF 安全速率 (15-30s)，不覆盖
     )
     start_ts = datetime.now().replace(microsecond=0).isoformat(sep=" ")
     t0 = time.monotonic()
