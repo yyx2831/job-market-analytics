@@ -165,14 +165,18 @@ class Job51XBrowserCollector:
         raise last_error or RuntimeError("xb open failed after retries")
 
     def _ensure_session(self, keyword: str, city_code: str) -> None:
-        """确保浏览器会话已建立（打开搜索页建立 cookie/session）。"""
+        """确保浏览器会话已建立（打开搜索页建立 cookie/session）。
+        浏览器刚重启时 SPA 初始化较慢，需要更长等待。"""
         if self._session_ready:
             return
         url = f"https://we.51job.com/pc/search?keyword={keyword}&location={city_code}"
         self._xb_open(url)
-        time.sleep(2)
+        # 浏览器重启后的首次连接需要更长初始化时间
+        sleep = 5 if getattr(self, "_first_session", True) else 2
+        time.sleep(sleep)
+        self._first_session = False
         self._session_ready = True
-        logger.info("session ready")
+        logger.info("session ready (sleep=%ds)", sleep)
 
     # ── API 调用 ──────────────────────────────────────────
 
