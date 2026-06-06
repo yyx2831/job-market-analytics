@@ -32,6 +32,17 @@ from ..anti_crawl import (
 
 logger = logging.getLogger("scraping.job51_xbrowser")
 
+
+class WAFBlockError(Exception):
+    """WAF 拦截异常 - 需要刷新会话而非重试。"""
+    pass
+
+
+class XBEvalError(Exception):
+    """xbrowser eval 通信异常。"""
+    pass
+
+
 # ── 城市代码映射 ──────────────────────────────────────────
 
 CITY_CODES: dict[str, str] = {
@@ -285,6 +296,36 @@ class Job51XBrowserCollector:
         time.sleep(wait)
         self._consecutive_errors = 0
 
+    def _fetch_page_with_recovery(self, keyword: str, city_code: str, page: int) -> tuple[int, list[dict]]:
+        """带智能恢复的 fetch_page 包装：WAF→reload，普通错误→短等重试，XB故障→长等重试。"""
+        last_error = None
+        for attempt in range(4):  # 最多4次尝试（含恢复）
+            try:
+                return self.fetch_page(keyword, city_code, page)
+            except WAFBlockError as e:
+                logger.warning("WAF block on attempt %d, recovering...", attempt + 1)
+                url = f"https://we.51job.com/pc/search?keyword={keyword}&location={city_code}"
+                self._reload_and_wait(url)
+                last_error = e
+                continue
+            except XBEvalError as e:
+                if attempt < 2:
+                    wait = (attempt + 1) * 15 + random.uniform(0, 10)
+                    logger.warning("XB eval error on attempt %d, waiting %.1fs: %s", attempt + 1, wait, e)
+                    time.sleep(wait)
+                    last_error = e
+                    continue
+                raise
+            except (RuntimeError, json.JSONDecodeError) as e:
+                if attempt < 1:
+                    wait = 8 + random.uniform(0, 5)
+                    logger.warning("API error on attempt %d, waiting %.1fs: %s", attempt + 1, wait, e)
+                    time.sleep(wait)
+                    last_error = e
+                    continue
+                raise
+        raise last_error or RuntimeError("fetch_page failed after all recovery attempts")
+
     def _handle_api_error(self, keyword: str, city_code: str, error_msg: str) -> bool:
         """处理 API 错误，返回 True 表示已恢复可重试。"""
         self._consecutive_errors += 1
@@ -303,17 +344,20 @@ class Job51XBrowserCollector:
 
     # ── 核心采集逻辑 ──────────────────────────────────────
 
-    @retry_on_failure(max_retries=3, base_delay=2.0, backoff_factor=1.5)
     def fetch_page(
         self, keyword: str, city_code: str, page: int
     ) -> tuple[int, list[dict]]:
-        """获取单页数据。返回 (total_count, items)。带自动重试。"""
+        """获取单页数据。返回 (total_count, items)。不自动重试——由调用方处理。"""
         self._ensure_session(keyword, city_code)
 
         js = self._build_extract_js(keyword, city_code, page)
         logger.info("fetching keyword=%s city=%s page=%d", keyword, city_code, page)
 
-        result = self._xb_eval(js, timeout_sec=self.timeout)
+        try:
+            result = self._xb_eval(js, timeout_sec=self.timeout)
+        except Exception as e:
+            raise XBEvalError(f"xb_eval failed: {e}") from e
+
         # xb.cjs 返回: {ok, data: {browser_command, result: {success, data: {origin, result}}}}
         eval_result = result.get("data", {}).get("result", {}).get("data", {}).get("result", "{}")
 
@@ -321,6 +365,11 @@ class Job51XBrowserCollector:
         if isinstance(eval_result, dict):
             data = eval_result
         elif isinstance(eval_result, str):
+            # 检测 WAF HTML 响应（返回的不是 JSON 而是 HTML 挑战页）
+            stripped = eval_result.strip()
+            if stripped.startswith(("<", "<!")):
+                logger.warning("WAF HTML detected, len=%d: %s", len(stripped), stripped[:200])
+                raise WAFBlockError(f"WAF returned HTML (len={len(stripped)})")
             try:
                 data = json.loads(eval_result)
             except json.JSONDecodeError:
@@ -330,8 +379,12 @@ class Job51XBrowserCollector:
             raise TypeError(f"unexpected eval result type: {type(eval_result)}")
 
         if "error" in data:
-            logger.error("API error for page %d: %s", page, data["error"])
-            raise RuntimeError(f"API error: {data['error']}")
+            err_msg = data["error"]
+            logger.error("API error for page %d: %s", page, err_msg)
+            # 检查是否是 WAF 相关错误
+            if any(kw in str(err_msg).lower() for kw in ["html", "challenge", "blocked", "forbidden", "unexpected"]):
+                raise WAFBlockError(f"API WAF error: {err_msg}")
+            raise RuntimeError(f"API error: {err_msg}")
 
         total = data.get("total", 0)
         items = data.get("items", [])
@@ -407,7 +460,7 @@ class Job51XBrowserCollector:
             try:
                 # 第一页
                 if start_page == 0:
-                    total_count, items = self.fetch_page(keyword, city_code, page=1)
+                    total_count, items = self._fetch_page_with_recovery(keyword, city_code, page=1)
                     total_queries += 1
                     self._consecutive_errors = 0
                     jobs = [self._to_raw_job(item, keyword, city) for item in items]
@@ -433,7 +486,7 @@ class Job51XBrowserCollector:
                     page_interval_sleep(page, self.rate_min, self.rate_max)
 
                     try:
-                        _, items = self.fetch_page(keyword, city_code, page)
+                        _, items = self._fetch_page_with_recovery(keyword, city_code, page)
                         total_queries += 1
                         self._consecutive_errors = 0
                         new_jobs = [self._to_raw_job(item, keyword, city) for item in items]
@@ -447,17 +500,8 @@ class Job51XBrowserCollector:
                             logger.info("keyword=%s page=%d empty, stopping", keyword, page)
                             break
                     except Exception as e:
-                        logger.warning("keyword=%s page=%d failed: %s", keyword, page, e)
-                        # WAF 恢复后重试该页
-                        self._handle_api_error(keyword, city_code, str(e))
-                        logger.info("retrying page=%d after WAF recovery", page)
-                        _, items = self.fetch_page(keyword, city_code, page)
-                        total_queries += 1
-                        self._consecutive_errors = 0
-                        new_jobs = [self._to_raw_job(item, keyword, city) for item in items]
-                        self.results.extend(new_jobs)
-                        already_collected += len(new_jobs)
-                        self._save_kw_progress(city, keyword, last_page=page, total_collected=already_collected)
+                        logger.warning("keyword=%s page=%d failed after recovery: %s", keyword, page, e)
+                        raise
 
             except Exception as e:
                 logger.error("keyword=%s failed after recovery: %s", keyword, e)
