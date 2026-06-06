@@ -300,52 +300,6 @@ class Job51XBrowserCollector:
         time.sleep(wait)
         self._consecutive_errors = 0
 
-    def _fetch_page_with_recovery(self, keyword: str, city_code: str, page: int) -> tuple[int, list[dict]]:
-        """带智能恢复的 fetch_page 包装：WAF→reload，普通错误→短等重试，XB故障→长等重试。"""
-        last_error = None
-        for attempt in range(4):  # 最多4次尝试（含恢复）
-            try:
-                return self.fetch_page(keyword, city_code, page)
-            except WAFBlockError as e:
-                logger.warning("WAF block on attempt %d, recovering...", attempt + 1)
-                url = f"https://we.51job.com/pc/search?keyword={keyword}&location={city_code}"
-                self._reload_and_wait(url)
-                last_error = e
-                continue
-            except XBEvalError as e:
-                if attempt < 2:
-                    wait = (attempt + 1) * 15 + random.uniform(0, 10)
-                    logger.warning("XB eval error on attempt %d, waiting %.1fs: %s", attempt + 1, wait, e)
-                    time.sleep(wait)
-                    last_error = e
-                    continue
-                raise
-            except (RuntimeError, json.JSONDecodeError) as e:
-                if attempt < 1:
-                    wait = 8 + random.uniform(0, 5)
-                    logger.warning("API error on attempt %d, waiting %.1fs: %s", attempt + 1, wait, e)
-                    time.sleep(wait)
-                    last_error = e
-                    continue
-                raise
-        raise last_error or RuntimeError("fetch_page failed after all recovery attempts")
-
-    def _handle_api_error(self, keyword: str, city_code: str, error_msg: str) -> bool:
-        """处理 API 错误，返回 True 表示已恢复可重试。"""
-        self._consecutive_errors += 1
-        logger.warning("consecutive errors: %d/%d", self._consecutive_errors, self._max_consecutive_errors)
-
-        if self._consecutive_errors >= self._max_consecutive_errors:
-            url = f"https://we.51job.com/pc/search?keyword={keyword}&location={city_code}"
-            self._reload_and_wait(url)
-            return True
-
-        # 少量错误，短暂等待
-        wait = 10 * self._consecutive_errors + random.uniform(0, 5)
-        logger.info("waiting %.1fs before retry...", wait)
-        time.sleep(wait)
-        return True
-
     # ── 核心采集逻辑 ──────────────────────────────────────
 
     def fetch_page(
@@ -438,94 +392,82 @@ class Job51XBrowserCollector:
         max_jobs_total: int = 200,
         reset_progress: bool = False,
     ) -> list[RawJob]:
-        """执行采集，支持断点续传。
-
-        Args:
-            city: 目标城市名称
-            keywords: 搜索关键词列表
-            max_pages_per_keyword: 每个关键词最多翻页数
-            max_jobs_total: 总岗位上限
-            reset_progress: 是否重置所有进度，从头采集
-        """
+        """执行采集。简单策略：每页尝试一次，失败跳过当前关键词。"""
         city_code = CITY_CODES.get(city)
         if not city_code:
             raise ValueError(f"Unknown city: {city}. Available: {list(CITY_CODES.keys())}")
 
         self.results = []
         total_queries = 0
+        self._consecutive_errors = 0
 
         logger.info("=== job51_xbrowser collect: city=%s code=%s keywords=%s ===",
                      city, city_code, keywords)
 
-        for keyword in keywords:
+        for kw_idx, keyword in enumerate(keywords):
             if len(self.results) >= max_jobs_total:
                 break
-
             if reset_progress:
                 self._clear_kw_progress(city, keyword)
 
-            # 读取断点：上次采集到哪一页
-            start_page, already_collected = self._load_kw_progress(city, keyword)
-            if already_collected >= max_jobs_total // len(keywords) if len(keywords) > 0 else max_jobs_total:
-                logger.info("keyword=%s already reached limit (%d), skipping", keyword, already_collected)
-                continue
-            if start_page > 0:
-                logger.info("keyword=%s resuming from page %d (already %d jobs)", keyword, start_page + 1, already_collected)
+            logger.info("--- keyword=%s (%d/%d) ---", keyword, kw_idx + 1, len(keywords))
 
             try:
-                # 第一页
-                if start_page == 0:
-                    total_count, items = self._fetch_page_with_recovery(keyword, city_code, page=1)
-                    total_queries += 1
-                    self._consecutive_errors = 0
-                    jobs = [self._to_raw_job(item, keyword, city) for item in items]
-                    self.results.extend(jobs)
-                    already_collected += len(jobs)
-                    self._save_kw_progress(city, keyword, last_page=1, total_collected=already_collected)
-
-                    if not items:
-                        logger.warning("keyword=%s page=1 empty (total=%d), WAF suspected", keyword, total_count)
-                        continue
-
-                    actual_max = min(max_pages_per_keyword, self.max_pages, (total_count // self.page_size) + 1)
-                    logger.info("keyword=%s: total=%d, will fetch up to %d pages", keyword, total_count, actual_max)
-                else:
-                    # 恢复时不知道实际 total，但 max_pages 是上限
-                    actual_max = min(max_pages_per_keyword, self.max_pages)
-
-                for page in range(start_page + 1 if start_page > 0 else 2, actual_max + 1):
-                    if len(self.results) >= max_jobs_total:
-                        break
-
-                    # 页间限速（使用反爬随机等待）
-                    page_interval_sleep(page, self.rate_min, self.rate_max)
-
-                    try:
-                        _, items = self._fetch_page_with_recovery(keyword, city_code, page)
-                        total_queries += 1
-                        self._consecutive_errors = 0
-                        new_jobs = [self._to_raw_job(item, keyword, city) for item in items]
-                        self.results.extend(new_jobs)
-                        already_collected += len(new_jobs)
-
-                        # 每页立即保存进度
-                        self._save_kw_progress(city, keyword, last_page=page, total_collected=already_collected)
-
-                        if not items:
-                            logger.info("keyword=%s page=%d empty, stopping", keyword, page)
-                            break
-                    except Exception as e:
-                        logger.warning("keyword=%s page=%d failed after recovery: %s", keyword, page, e)
-                        raise
-
+                total_count, items = self.fetch_page(keyword, city_code, page=1)
+                total_queries += 1
             except Exception as e:
-                logger.error("keyword=%s failed after recovery: %s", keyword, e)
+                logger.warning("keyword=%s page=1 failed: %s", keyword, e)
+                self._consecutive_errors += 1
+                if self._consecutive_errors >= 3:
+                    logger.warning("%d consecutive errors, reloading...", self._consecutive_errors)
+                    self._reload_and_wait(
+                        f"https://we.51job.com/pc/search?keyword={keyword}&location={city_code}"
+                    )
+                    self._consecutive_errors = 0
                 continue
 
+            if not items:
+                logger.warning("keyword=%s page=1 empty (total=%d), skipping", keyword, total_count)
+                self._consecutive_errors += 1
+                continue
+
+            self._consecutive_errors = 0
+
+            # 加第一页数据
+            jobs = [self._to_raw_job(item, keyword, city) for item in items]
+            self.results.extend(jobs)
+            logger.info("  page 1: %d items (total=%d)", len(items), total_count)
+
+            # 计算需要多少页
+            actual_max = min(max_pages_per_keyword, self.max_pages, (total_count // self.page_size) + 1)
+            logger.info("  will fetch %d pages", actual_max)
+
+            for page in range(2, actual_max + 1):
+                if len(self.results) >= max_jobs_total:
+                    break
+
+                # 页间限速
+                page_interval_sleep(page, self.rate_min, self.rate_max)
+
+                try:
+                    _, items = self.fetch_page(keyword, city_code, page)
+                    total_queries += 1
+                except Exception as e:
+                    logger.warning("keyword=%s page=%d failed: %s", keyword, page, e)
+                    break  # 失败就停，跳到下一个关键词
+
+                if not items:
+                    logger.info("  page %d: empty, stopping", page)
+                    break
+
+                new_jobs = [self._to_raw_job(item, keyword, city) for item in items]
+                self.results.extend(new_jobs)
+                logger.info("  page %d: %d items (cumulative=%d)", page, len(new_jobs), len(self.results))
+
             # 关键词间随机等待
-            if keyword != keywords[-1]:
+            if kw_idx < len(keywords) - 1:
                 kw_wait = keyword_interval_sleep()
-                logger.info("keyword=%s done, waiting %.1fs before next keyword", keyword, kw_wait)
+                logger.info("keyword=%s done, waiting %.1fs", keyword, kw_wait)
 
         logger.info("=== job51_xbrowser done: %d jobs, %d queries ===",
                      len(self.results), total_queries)
