@@ -388,6 +388,17 @@ class Job51XBrowserCollector:
 
         total = data.get("total", 0)
         items = data.get("items", [])
+
+        # 检测 WAF 无声拒绝：返回 total=0 但页面正常（非 404）
+        if total == 0 and not items:
+            self._consecutive_errors += 1
+            logger.warning("page %d: empty result (total=0), consecutive_errors=%d", page, self._consecutive_errors)
+            if self._consecutive_errors >= 2:
+                raise WAFBlockError(f"WAF silent block: {self._consecutive_errors} empty results in a row")
+        else:
+            # 成功时重置错误计数（在 collect 中）
+            pass
+
         logger.info("page %d: got %d items (total=%d)", page, len(items), total)
         return total, items
 
