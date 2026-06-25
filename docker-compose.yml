@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+  # ── Streamlit 前端仪表盘 ──
+  streamlit:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Shanghai
+    command: >
+      streamlit run app.py
+      --server.port=8501
+      --server.address=0.0.0.0
+      --server.headless=true
+      --server.enableCORS=false
+      --server.enableXsrfProtection=false
+
+  # ── FastAPI REST API 后端 ──
+  fastapi:
+    build: .
+    ports:
+      - "8502:8502"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Shanghai
+    command: >
+      uvicorn src.api.main:app
+      --host 0.0.0.0
+      --port 8502
+      --workers 2
+
+  # ── Nginx 反向代理 ──
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - streamlit
+      - fastapi
+    restart: unless-stopped

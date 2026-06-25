@@ -6,11 +6,14 @@
   python scripts/run_spider.py --source all --city 成都 --limit 100
   python scripts/run_spider.py --source job51_xbrowser --city 成都 --all-keywords --limit-per-kw 50
   python scripts/run_spider.py --source job51_xbrowser --cities 上海 北京 深圳 --keywords Python --limit-per-kw 40
+  python scripts/run_spider.py --source job51_mobile --keywords Python Java --limit-per-kw 30
+  python scripts/run_spider.py --source job51_mobile --all-keywords --limit-per-kw 30
 """
 
 from __future__ import annotations
 
 import argparse
+import logging
 import sys
 import time
 from datetime import datetime
@@ -19,7 +22,16 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+# ── 日志配置 ──
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    datefmt="%H:%M:%S",
+)
+logger = logging.getLogger("spider")
+
 from src.scraping.sources import CompanySiteCollector, Job51Collector, Job51XBrowserCollector
+from src.scraping.sources.mobile_51job import collect as mobile_51job_collect, save_to_db as mobile_51job_save_db, ParsedJob
 from src.scraping.pipeline import pipeline
 from src.scraping.quality import generate_quality_report, print_report, save_report
 from src.scraping.anti_crawl import city_interval_sleep
@@ -49,10 +61,10 @@ def run_job51(city: str, keywords: list[str], limit: int, enrich_detail: bool = 
     )
 
     duration = time.monotonic() - t0
-    print(f"\n采集完成: {len(raw_jobs)} raw jobs in {duration:.1f}s")
+    logger.info(f"\n采集完成: {len(raw_jobs)} raw jobs in {duration:.1f}s")
 
     if not raw_jobs:
-        print("无数据，跳过后续步骤。")
+        logger.info(f"无数据，跳过后续步骤。")
         return
 
     _process_results(collector, raw_jobs, duration)
@@ -76,10 +88,10 @@ def run_job51_xbrowser(city: str, keywords: list[str], limit: int) -> None:
     )
 
     duration = time.monotonic() - t0
-    print(f"\n采集完成: {len(raw_jobs)} raw jobs in {duration:.1f}s")
+    logger.info(f"\n采集完成: {len(raw_jobs)} raw jobs in {duration:.1f}s")
 
     if not raw_jobs:
-        print("无数据，跳过后续步骤。")
+        logger.info(f"无数据，跳过后续步骤。")
         return
 
     _process_xbrowser_results(
@@ -93,7 +105,7 @@ def run_company_site(city: str, keywords: list[str], limit: int, site: str = "al
     all_raw: list = []
 
     for site_name in sites:
-        print(f"\n--- 采集 {site_name} ---")
+        logger.info(f"\n--- 采集 {site_name} ---")
         collector = CompanySiteCollector(RAW_DIR / "company_site", site_name=site_name)
         t0 = time.monotonic()
 
@@ -104,17 +116,17 @@ def run_company_site(city: str, keywords: list[str], limit: int, site: str = "al
         )
 
         duration = time.monotonic() - t0
-        print(f"{site_name}: {len(raw_jobs)} jobs in {duration:.1f}s")
+        logger.info(f"{site_name}: {len(raw_jobs)} jobs in {duration:.1f}s")
 
         if raw_jobs:
             collector.save_raw()
             all_raw.extend(raw_jobs)
 
     if not all_raw:
-        print("无数据。")
+        logger.info(f"无数据。")
         return
 
-    print(f"\n总计: {len(all_raw)} raw jobs")
+    logger.info(f"\n总计: {len(all_raw)} raw jobs")
     # 对所有站点汇总做 pipeline
     _process_combined(all_raw, "company_site", time.monotonic() - t0)
 
@@ -128,20 +140,20 @@ def _process_results(collector, raw_jobs: list, duration: float) -> None:
     date_str = time.strftime("%Y-%m-%d")
     csv_path = PROCESSED_DIR / f"jobs_{collector.source_name}_{date_str}.csv"
     count, normalized = pipeline(jsonl_path, csv_path)
-    print(f"归一化: {len(raw_jobs)} raw -> {count} normalized -> {csv_path}")
+    logger.info(f"归一化: {len(raw_jobs)} raw -> {count} normalized -> {csv_path}")
 
     # 质量报告
     report = generate_quality_report(raw_jobs, normalized, collector.source_name, duration_seconds=duration)
     print_report(report)
     report_path = save_report(report, REPORTS_DIR)
-    print(f"质量报告: {report_path}")
+    logger.info(f"质量报告: {report_path}")
 
     # 入库
     conn = connect(DB_PATH)
     init_db(conn)
     inserted = import_csv(conn, csv_path)
     conn.close()
-    print(f"入库: {inserted} 条新记录 -> {DB_PATH}")
+    logger.info(f"入库: {inserted} 条新记录 -> {DB_PATH}")
 
 
 def _process_xbrowser_results(
@@ -169,17 +181,17 @@ def _process_xbrowser_results(
     date_str = time.strftime("%Y-%m-%d")
     csv_path = PROCESSED_DIR / f"jobs_job51_xbrowser_{date_str}.csv"
     count, normalized = pipeline(jsonl_path, csv_path)
-    print(f"归一化: {len(raw_jobs)} raw -> {count} normalized -> {csv_path}")
+    logger.info(f"归一化: {len(raw_jobs)} raw -> {count} normalized -> {csv_path}")
 
     report = generate_quality_report(raw_jobs, normalized, "job51_xbrowser", duration_seconds=duration)
     print_report(report)
     report_path = save_report(report, REPORTS_DIR)
-    print(f"质量报告: {report_path}")
+    logger.info(f"质量报告: {report_path}")
 
     conn = connect(DB_PATH)
     init_db(conn)
     stats = import_csv_with_stats(conn, csv_path)
-    print(f"入库统计: 新增 {stats.inserted} 条 | 更新 {stats.updated} 条 | 跳过 {stats.skipped} 条 -> {DB_PATH}")
+    logger.info(f"入库统计: 新增 {stats.inserted} 条 | 更新 {stats.updated} 条 | 跳过 {stats.skipped} 条 -> {DB_PATH}")
 
     # 记录采集运行信息
     end_ts = datetime.now().replace(microsecond=0).isoformat(sep=" ")
@@ -206,7 +218,7 @@ def _process_combined(raw_jobs: list, source: str, duration: float) -> None:
     normalized = normalize_batch(raw_jobs)
     csv_path = PROCESSED_DIR / f"jobs_{source}_{date_str}.csv"
     count = write_csv(normalized, csv_path)
-    print(f"归一化: {len(raw_jobs)} raw -> {count} normalized -> {csv_path}")
+    logger.info(f"归一化: {len(raw_jobs)} raw -> {count} normalized -> {csv_path}")
 
     report = generate_quality_report(raw_jobs, normalized, source, duration_seconds=duration)
     print_report(report)
@@ -216,12 +228,98 @@ def _process_combined(raw_jobs: list, source: str, duration: float) -> None:
     init_db(conn)
     inserted = import_csv(conn, csv_path)
     conn.close()
-    print(f"入库: {inserted} 条新记录 -> {DB_PATH}")
+    logger.info(f"入库: {inserted} 条新记录 -> {DB_PATH}")
+
+
+def run_job51_mobile(
+    city: str,
+    keywords: list[str],
+    limit: int,
+    db_path: str = None,
+    delay: float = 3.0,
+    retries: int = 2,
+    checkpoint_file: str = None,
+) -> list[ParsedJob]:
+    """
+    通过 51job 移动站采集。
+
+    Args:
+        delay: 关键词间延迟(秒), 防反爬
+        retries: 失败重试次数
+        checkpoint_file: 断点续传文件路径, 记录已完成关键词
+    """
+    if db_path is None:
+        db_path = str(PROCESSED_DIR / "jobs.db")
+
+    # ── 断点续传 ──
+    if checkpoint_file:
+        cp = Path(checkpoint_file)
+        done_keywords = set()
+        if cp.exists():
+            done_keywords = set(cp.read_text().strip().splitlines())
+            logger.info(f"断点续传: 已完成 {len(done_keywords)} 个关键词: {done_keywords}")
+        keywords = [k for k in keywords if k not in done_keywords]
+        if not keywords:
+            logger.info("所有关键词已完成，跳过采集。")
+            return []
+
+    t0 = time.monotonic()
+    all_jobs: list[ParsedJob] = []
+    failed_keywords: list[str] = []
+
+    for i, kw in enumerate(keywords):
+        kw_limit = max(limit // len(keywords), 10)
+        logger.info(f"  [{i+1}/{len(keywords)}] 关键词: {kw} (limit={kw_limit})")
+
+        for attempt in range(retries + 1):
+            try:
+                jobs = mobile_51job_collect(keyword=kw, limit=kw_limit)
+                all_jobs.extend(jobs)
+                logger.info(f"    → {len(jobs)} 条")
+                break  # Success
+            except Exception as e:
+                logger.error(f"  {kw} 第{attempt+1}次失败: {e}")
+                if attempt < retries:
+                    backoff = (attempt + 1) * 5
+                    logger.info(f"  重试前等待 {backoff}s...")
+                    time.sleep(backoff)
+                else:
+                    failed_keywords.append(kw)
+
+        # ── checkpoint ──
+        if checkpoint_file:
+            Path(checkpoint_file).write_text("\n".join(
+                sorted(set(keywords[:i+1]) - set(failed_keywords))
+            ))
+
+        # ── 关键词间延迟 (最后一个关键词不延迟) ──
+        if i < len(keywords) - 1:
+            jitter = delay * (0.8 + 0.4 * (hash(kw) % 1000) / 1000)  # 0.8× ~ 1.2× jitter
+            logger.debug(f"  延迟 {jitter:.1f}s...")
+            time.sleep(jitter)
+
+    duration = time.monotonic() - t0
+
+    if failed_keywords:
+        logger.warning(f"⚠ 失败关键词: {failed_keywords}")
+    logger.info(f"采集完成: {len(all_jobs)} 条 (失败 {len(failed_keywords)}), 耗时 {duration:.1f}s")
+
+    if all_jobs:
+        n = mobile_51job_save_db(all_jobs, db_path)
+        logger.info(f"入库: {n}/{len(all_jobs)} 条新增 -> {db_path}")
+
+    # ── 清理 checkpoint ──
+    if checkpoint_file and Path(checkpoint_file).exists():
+        if not failed_keywords:
+            Path(checkpoint_file).unlink()
+            logger.debug("Checkpoint 已清理")
+
+    return all_jobs
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="采集入口")
-    parser.add_argument("--source", choices=["job51", "job51_xbrowser", "company_site", "all"], default="job51_xbrowser")
+    parser.add_argument("--source", choices=["job51", "job51_xbrowser", "job51_mobile", "company_site", "all"], default="job51_xbrowser")
     parser.add_argument("--site", default="all", help="企业官网站点名 (meituan/bytedance/tencent/alibaba/all)")
     parser.add_argument("--city", default="成都")
     parser.add_argument("--cities", nargs="+", help="多城市采集（覆盖 --city）")
@@ -229,31 +327,49 @@ def main() -> None:
     parser.add_argument("--all-keywords", action="store_true", help="使用全部默认关键词（10 个）")
     parser.add_argument("--limit", type=int, default=100, help="总采集上限")
     parser.add_argument("--limit-per-kw", type=int, default=40, help="每个关键词采集上限")
+    parser.add_argument("--delay", type=float, default=3.0, help="关键词间延迟(秒), 防反爬")
+    parser.add_argument("--retries", type=int, default=2, help="失败重试次数")
+    parser.add_argument("--checkpoint", help="断点续传文件路径")
     parser.add_argument("--enrich-detail", action="store_true", help="访问详情页补充字段（慢）")
     args = parser.parse_args()
 
     keywords = DEFAULT_KEYWORDS if args.all_keywords else args.keywords
     cities = args.cities if args.cities else [args.city]
 
-    print("=" * 50)
-    print(f"采集任务: source={args.source}, cities={cities}, keywords={keywords}")
-    print(f"每关键词上限: {args.limit_per_kw}, 总上限: {args.limit}")
-    print("=" * 50)
+    logger.info("=" * 50)
+    logger.info(f"采集任务: source={args.source}, cities={cities}, keywords={keywords}")
+    logger.info(f"每关键词上限: {args.limit_per_kw}, 总上限: {args.limit}")
+    logger.info("=" * 50)
 
-    if args.source in ("job51", "job51_xbrowser"):
+    if args.source == "job51_mobile":
+        run_job51_mobile(
+            city=cities[0],
+            keywords=keywords,
+            limit=min(args.limit_per_kw * len(keywords), args.limit),
+            delay=args.delay,
+            retries=args.retries,
+            checkpoint_file=args.checkpoint,
+        )
+    elif args.source == "job51_xbrowser":
         for i, city in enumerate(cities):
-            print(f"\n>>> 城市: {city} ({i+1}/{len(cities)})")
+            logger.info(f"\n>>> 城市: {city} ({i+1}/{len(cities)})")
             run_job51_xbrowser(city, keywords, min(args.limit_per_kw * len(keywords), args.limit))
-            # 城市间添加等待（最后一个城市不等）
             if i < len(cities) - 1:
                 wait = city_interval_sleep()
-                print(f"城市切换，等待 {wait:.1f}s...")
+                logger.info(f"城市切换，等待 {wait:.1f}s...")
+    elif args.source == "job51":
+        for i, city in enumerate(cities):
+            logger.info(f"\n>>> 城市: {city} ({i+1}/{len(cities)})")
+            run_job51(city, keywords, min(args.limit_per_kw * len(keywords), args.limit), args.enrich_detail)
+            if i < len(cities) - 1:
+                wait = city_interval_sleep()
+                logger.info(f"城市切换，等待 {wait:.1f}s...")
     elif args.source == "company_site":
         run_company_site(args.city, args.keywords, args.limit, args.site)
     elif args.source == "all":
-        print("\n>>> job51")
+        logger.info(f"\n>>> job51")
         run_job51(args.city, args.keywords[:5], args.limit // 2, args.enrich_detail)
-        print("\n>>> company_site")
+        logger.info(f"\n>>> company_site")
         run_company_site(args.city, args.keywords[:5], args.limit // 2, args.site)
 
 

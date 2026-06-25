@@ -1,0 +1,34 @@
+# Python
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.egg-info
+.pytest_cache
+.pycache
+.ipynb_checkpoints
+
+# Data (mounted as volumes)
+data/raw
+data/processed/*.db
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+
+# Reports & logs
+reports/*.md
+logs/*.log
+
+# Node (if any)
+node_modules

@@ -1,6 +1,14 @@
-streamlit==1.35.0
-pandas==2.2.2
-plotly==5.22.0
+streamlit>=1.35.0
+pandas>=2.2.0
+plotly>=5.22.0
 httpx>=0.25.0
 beautifulsoup4>=4.12.0
 lxml>=4.9.0
+numpy>=1.26.0
+pytest>=8.0.0
+fpdf2>=2.8.0
+jieba==0.42.1
+joblib==1.5.3
+scikit-learn==1.6.1
+scipy==1.13.1
+threadpoolctl==3.6.0

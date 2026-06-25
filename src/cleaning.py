@@ -1,3 +1,11 @@
+"""数据清洗工具：薪资解析、技能抽取、去重键生成、文本归一化。
+
+核心能力：
+- parse_salary() — 解析 10-15K / 8千-1.2万 / 200-300元/天 / ·13薪 等格式
+- extract_skills() — 从文本中匹配 SKILL_KEYWORDS 字典的已知技能
+- canonical_job_key() — 生成去重键，支持 source|job_id、source|url、title|company|city
+"""
+
 from __future__ import annotations
 
 import re

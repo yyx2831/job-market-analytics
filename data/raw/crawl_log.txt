@@ -1,0 +1,87 @@
+21:57:04 [INFO] ==================================================
+21:57:04 [INFO] 采集任务: source=job51_mobile, cities=['成都'], keywords=['Python', 'Java', '前端', '数据分析', '测试', '运维', '产品经理', 'UI设计', '运营', '销售']
+21:57:04 [INFO] 每关键词上限: 15, 总上限: 100
+21:57:04 [INFO] ==================================================
+21:57:04 [INFO]   [1/10] 关键词: Python (limit=10)
+21:57:17 [INFO] Collected 10 jobs for 'Python'
+21:57:17 [INFO]     → 10 条
+21:57:23 [INFO]   [2/10] 关键词: Java (limit=10)
+21:57:37 [INFO] Collected 10 jobs for 'Java'
+21:57:37 [INFO]     → 10 条
+21:57:42 [INFO]   [3/10] 关键词: 前端 (limit=10)
+21:57:54 [INFO] Collected 10 jobs for '前端'
+21:57:54 [INFO]     → 10 条
+21:57:59 [INFO]   [4/10] 关键词: 数据分析 (limit=10)
+21:58:10 [INFO] Collected 10 jobs for '数据分析'
+21:58:10 [INFO]     → 10 条
+21:58:14 [INFO]   [5/10] 关键词: 测试 (limit=10)
+21:58:26 [INFO] Collected 10 jobs for '测试'
+21:58:26 [INFO]     → 10 条
+21:58:30 [INFO]   [6/10] 关键词: 运维 (limit=10)
+21:58:41 [INFO] Collected 10 jobs for '运维'
+21:58:41 [INFO]     → 10 条
+21:58:47 [INFO]   [7/10] 关键词: 产品经理 (limit=10)
+21:58:59 [INFO] Collected 10 jobs for '产品经理'
+21:58:59 [INFO]     → 10 条
+21:59:04 [INFO]   [8/10] 关键词: UI设计 (limit=10)
+21:59:15 [INFO] Collected 10 jobs for 'UI设计'
+21:59:15 [INFO]     → 10 条
+21:59:19 [INFO]   [9/10] 关键词: 运营 (limit=10)
+21:59:30 [INFO] Collected 10 jobs for '运营'
+21:59:30 [INFO]     → 10 条
+21:59:34 [INFO]   [10/10] 关键词: 销售 (limit=10)
+21:59:45 [INFO] Collected 10 jobs for '销售'
+21:59:45 [INFO]     → 10 条
+21:59:45 [INFO] 采集完成: 100 条 (失败 0), 耗时 161.1s
+21:59:45 [INFO] DB: 100 条新增到 /Users/yangyuxiao/codes/job-market-analytics/data/processed/jobs.db
+21:59:45 [INFO] 入库: 100/100 条新增 -> /Users/yangyuxiao/codes/job-market-analytics/data/processed/jobs.db
+21:54:40 [INFO] ==================================================
+21:54:40 [INFO] 采集任务: source=job51_mobile, cities=['成都'], keywords=['Python', 'Java', '前端', '数据分析', '测试', '运维', '产品经理', 'UI设计', '运营', '销售']
+21:54:40 [INFO] 每关键词上限: 15, 总上限: 100
+21:54:40 [INFO] ==================================================
+21:54:40 [INFO]   [1/10] 关键词: Python (limit=10)
+21:54:52 [INFO] Collected 10 jobs for 'Python'
+21:54:52 [INFO]     → 10 条
+21:54:57 [INFO]   [2/10] 关键词: Java (limit=10)
+21:55:08 [INFO] Collected 10 jobs for 'Java'
+21:55:08 [INFO]     → 10 条
+21:55:13 [INFO]   [3/10] 关键词: 前端 (limit=10)
+21:55:24 [INFO] Collected 10 jobs for '前端'
+21:55:24 [INFO]     → 10 条
+21:55:29 [INFO]   [4/10] 关键词: 数据分析 (limit=10)
+21:55:45 [INFO] Collected 10 jobs for '数据分析'
+21:55:45 [INFO]     → 10 条
+21:55:51 [INFO]   [5/10] 关键词: 测试 (limit=10)
+21:56:06 [INFO] Collected 10 jobs for '测试'
+21:56:06 [INFO]     → 10 条
+21:56:11 [INFO]   [6/10] 关键词: 运维 (limit=10)
+21:56:26 [INFO] Collected 10 jobs for '运维'
+21:56:26 [INFO]     → 10 条
+21:56:31 [INFO]   [7/10] 关键词: 产品经理 (limit=10)
+21:56:42 [INFO] Collected 10 jobs for '产品经理'
+21:56:42 [INFO]     → 10 条
+21:56:46 [INFO]   [8/10] 关键词: UI设计 (limit=10)
+21:56:57 [INFO] Collected 10 jobs for 'UI设计'
+21:56:57 [INFO]     → 10 条
+21:57:03 [INFO]   [9/10] 关键词: 运营 (limit=10)
+21:57:14 [INFO] Collected 10 jobs for '运营'
+21:57:14 [INFO]     → 10 条
+21:57:18 [INFO]   [10/10] 关键词: 销售 (limit=10)
+21:57:29 [INFO] Collected 10 jobs for '销售'
+21:57:29 [INFO]     → 10 条
+21:57:29 [INFO] 采集完成: 100 条 (失败 0), 耗时 168.2s
+21:57:29 [INFO] DB: 100 条新增到 /Users/yangyuxiao/codes/job-market-analytics/data/processed/jobs.db
+21:57:29 [INFO] 入库: 100/100 条新增 -> /Users/yangyuxiao/codes/job-market-analytics/data/processed/jobs.db
+
+========================================
+[2026-06-25 21:57:37] 每日岗位采集完成
+========================================
+- 任务: job51_mobile 每日采集
+- 关键词: Python, Java, 前端, 数据分析, 测试, 运维, 产品经理, UI设计, 运营, 销售
+- 每关键词上限: 15 (实际采集 10 条/关键词)
+- 采集总数: 100 条, 失败 0 条
+- 耗时: 168.2s
+- 入库: 100/100 条新增 -> data/processed/jobs.db
+- 检查点: data/raw/.crawl_checkpoint
+========================================
+

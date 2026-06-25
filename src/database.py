@@ -1,3 +1,15 @@
+"""SQLite 数据库层：建表、CSV 增量 upsert 导入、采集运行记录。
+
+三表结构：
+- jobs — 岗位主表，dedupe_key UNIQUE 约束实现增量 upsert
+- job_skills — 岗位-技能多对多关联表
+- crawl_runs — 采集运行审计表
+
+核心函数：
+- import_csv_with_stats() — CSV 导入，返回 ImportStats(inserted, updated, skipped)
+- record_crawl_run() — 记录每次采集的执行情况
+"""
+
 from __future__ import annotations
 
 import csv
